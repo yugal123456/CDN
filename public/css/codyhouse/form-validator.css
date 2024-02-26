@@ -1,0 +1,14 @@
+/* -------------------------------- 
+
+File#: _1_form-validator
+Title: Form Validator
+Descr: A plugin to validate form fields
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.form-validate__error-msg {
+  display: none;
+}
+.form-validate__input-wrapper--error .form-validate__error-msg {
+  display: block;
+}

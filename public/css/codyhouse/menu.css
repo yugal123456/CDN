@@ -1,0 +1,86 @@
+/* -------------------------------- 
+
+File#: _1_menu
+Title: Menu
+Descr: Application menu that provides access to a set of functionalities
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.menu {
+    --menu-vertical-gap: 4px;
+    /* vertical gap between the Menu element and its control */
+    --menu-item-padding: var(--space-xxxs) var(--space-xs);
+    list-style: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: fixed;
+    /* top/left position set in JS */
+    z-index: var(--z-index-popover, 5);
+    width: 220px;
+    background-color: var(--color-bg-light);
+    box-shadow: var(--inner-glow), var(--shadow-md);
+    padding: var(--space-xxs) 0;
+    border-radius: var(--radius-md);
+    margin-top: var(--menu-vertical-gap);
+    margin-bottom: var(--menu-vertical-gap);
+    overflow: auto;
+    /* use rem units */
+    --space-unit: 1rem;
+    --text-unit: 1rem;
+    font-size: var(--text-unit);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.2s, opacity 0.2s;
+}
+
+.menu--is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.2s;
+}
+
+.menu--overlay {
+    z-index: var(--z-index-overlay, 15);
+}
+
+.menu__content {
+    display: flex;
+    align-items: center;
+    padding: var(--menu-item-padding);
+    text-decoration: none;
+    /* reset link style */
+    color: var(--color-contrast-high);
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.2s;
+}
+
+.menu__content:hover {
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+
+.menu__content:focus {
+    outline: none;
+    background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.15);
+}
+
+.menu__label {
+    padding: var(--menu-item-padding);
+    font-size: var(--text-sm);
+    color: var(--color-contrast-medium);
+}
+
+.menu__separator {
+    height: 1px;
+    background-color: var(--color-contrast-lower);
+    margin: var(--menu-item-padding);
+}
+
+.menu__icon {
+    color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.5);
+    margin-right: var(--space-xxs);
+}

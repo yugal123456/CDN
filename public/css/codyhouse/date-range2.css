@@ -1,0 +1,24 @@
+/* -------------------------------- 
+
+File#: _2_date-range
+Title: Date Range
+Descr: A controller for choosing date ranges
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.date-range,
+.date-range__wrapper {
+    position: relative;
+}
+
+.date-range__input {
+    display: none;
+}
+
+.date-picker{
+    background-color: var(--color-bg);
+}
+
+.js-date-range__value::before{
+    all: initial; 
+}

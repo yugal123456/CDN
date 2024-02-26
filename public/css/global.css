@@ -1,0 +1,1377 @@
+@import url(light.css);
+@import url(dark.css);
+   
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-Thin.otf);
+    font-style: normal;
+    font-weight: 100;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-UltraLight.otf);
+    font-style: normal;
+    font-weight: 200;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-Light.otf);
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+@font-face {
+    font-family: Nacelle;
+    src: url(../nacelle-fonts/Nacelle-Regular.otf);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-SemiBold.otf);
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-Bold.otf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src:url(../nacelle-fonts/Nacelle-Heavy.otf);
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face{
+    font-family: Nacelle;
+    src: url(../nacelle-fonts/Nacelle-Black.otf);
+    font-style: normal;
+    font-weight: 950;
+}
+
+/* COMMON CSS :: STARTS */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box !important;
+    font-family: Nacelle !important;
+    /* overflow-x: hidden; */
+}
+
+body{
+    background-color: var(--body-background);
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+ol,
+ul{
+    list-style:none
+}
+
+blockquote,
+q{
+    quotes:none
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video{
+    margin:0;
+    padding:0;
+    border:0
+}
+
+.width-100{
+    width:100%
+}
+
+.width-70{
+    width: 70%;
+}
+
+.width-100vw{
+    width:100vw
+}
+
+.w-auto{
+    width: auto !important;
+}
+
+.height-100vh{
+    height: 100vh;
+}
+
+.height-100{
+    height: 100%;
+}
+
+.width-50{
+    width: 50%;
+}
+
+.float-right {
+    float: right;
+}
+
+.overflow-y-hidden{
+    overflow-y: hidden;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-end{
+    justify-content: flex-end;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-start{
+    align-items: flex-start;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
+.flex-row{
+    flex-direction: row;
+}
+
+.hlink{
+    color: #0a9ef2 !important;
+}
+
+
+
+
+.flex-column{
+    flex-direction: column;
+}
+
+.gap-10{
+    gap: 10px;
+}
+
+.gapadding-set{
+    gap: 30px;
+}
+.pagination-font .text-sm{
+    font-weight: normal !important;
+}
+
+.position-relative{
+    position: relative;
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.border-0{
+    border: unset !important;
+}
+
+.hide-md{
+    display: none;
+}
+
+.bg-none{
+    background-color: unset !important;
+}
+
+.box-shadow-none{
+    box-shadow: unset !important;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus-visible,
+button:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.btn,
+.form-control,
+.link,
+.reset{
+    background-color:transparent;
+    padding:0;
+    border:0;
+    border-radius:0;
+    color:inherit;
+    line-height:inherit;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none
+}
+
+.sr-only{
+    position:absolute;
+    clip:rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path:inset(50%);
+    clip-path:inset(50%);
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    padding:0;
+    border:0;
+    white-space:nowrap
+}
+
+button,
+a{
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+svg{
+    margin-right: 0px !important;
+}
+
+.btn--delete .simpletrash::before {
+    background-color: var(--error-msg);
+}
+
+i{
+    font: normal normal normal 14px/1 FontAwesome !important;
+}
+
+i::before {
+    background-color: var(--dark-gray-color);
+}
+
+
+.fa-eye:before,
+.fa-eye-slash:before{
+    background-color: transparent;
+}
+
+i.plug::before{
+    background-color: var(--light-gray);
+}
+
+.is-hidden{
+    display:none !important
+}
+
+.main-content-container{
+    padding: 20px 10px;
+    /* 20px 40px */
+}
+
+.section-heading{
+    color: var(--dark-gray-color);
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    margin-bottom: 25px;
+}
+
+.heading{
+    color: var(--dark-gray-color);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+}
+
+.system-setting-header{
+    color: var(--dark-gray-color);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0em;
+}
+
+.section-subheading,
+.no-data-notification{
+    color: var(--gray-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    padding: 25px 35px;
+    border-bottom: 1px solid var(--table-border);
+    margin-top: 0px !important;
+}
+
+/* COMMON CSS :: ENDS */
+
+/* CUSTOM CHECKBOX CSS :: STARTS */
+
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0px !important;
+}
+
+/* Hide the browser's default checkbox */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.custom-checkbox  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: var(--light-stroke);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-checkbox input:checked ~ .checkmark {
+    background-color: var(--primary-color) !important;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-checkbox input:checked ~ .checkmark:after {
+    display: block;
+    top: 6px;
+}
+
+/* Style the checkmark/indicator */
+.custom-checkbox .checkmark:after {
+    width: 8px;
+    height: 14px;
+    border: solid var(--white-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* CUSTOM CHECKBOX CSS :: ENDS */
+
+/* TOGGLE BUTTON CSS :: STARTS */
+
+.switch{
+    display:inline-flex;
+    flex-shrink:0;
+    align-items: center;
+    position: relative;
+    width: 65px;
+    height: 35px;
+    border-radius: 60px;
+}
+
+.switch__input,.switch__label{
+    position:absolute;
+    left:0;
+    top:0
+}
+
+.switch__input{
+    margin:0;
+    padding:0;
+    opacity:0;
+    height:0;
+    width:0;
+    pointer-events:none
+}
+
+.switch__input:checked+.switch__label,
+.dark-mode-switch .switch__input:not(:checked) + .switch__label{
+    background-color: var(--primary-color) !important;
+}
+
+.switch__input:checked+.switch__label+.switch__marker{
+    left:5px;
+}
+
+.switch__label{
+    color:transparent;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    background-color:var(--primary-color);
+    border-radius:inherit;
+    z-index:1;
+    overflow:hidden;
+}
+
+.switch__marker{
+    position:relative;
+    background-color:var(--white-color);
+    width: 27px;
+    height: 27px;
+    border-radius:50%;
+    z-index:2;
+    pointer-events:none;
+    left:32px;
+    transition:left 0.2s;
+    will-change:left
+}
+
+.balance-section .switch__marker::after{
+    position: absolute;
+    content: 'Off';
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    left: 32px;
+    font-size: 13px;
+    color: var(--dark-gray-color);
+    top: 7px;
+}
+
+.balance-section .switch__marker::before{
+    position: absolute;
+    content: 'On';
+    width: 100%;
+    height: 100%;
+    right: 22px;
+    font-size: 13px;
+    color: var(--white-color);
+    top: 7px;
+}
+
+.form .switch__input:not(:checked) + .switch__label+.switch__marker::before{
+    display: none;
+}
+
+.form .switch__input:checked + .switch__label+.switch__marker::after{
+    display: none;
+}
+
+.form .switch__input:checked+.on-off-text{
+    color: var(--white-color);
+}
+
+.hide-on-dark{
+    display: block;
+    left: 7px;
+    z-index: 9;
+}
+
+.hide-on-light{
+    z-index: 9;
+    right: 10px;
+}
+
+.hide-on-light{
+    display: none;
+}
+
+.date-picker--is-visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .2s;
+    z-index: 999;
+    background: var(--table-bgcolor);
+    border: 1px solid var(--table-border);
+    box-shadow: var(--table-box-shadow);
+    color: var(--gray-color);
+}
+
+/* TOGGLE BUTTON CSS :: ENDS */
+
+/* CUSTOM SELECT BOX CSS :: STARTS */
+.select2-container {
+    z-index: 99;
+    width: 100% !important;
+}
+.select2-container--default .select2-selection--multiple{
+    border: 1px solid var(--textbox-border) !important;
+    /* height: var(--modal-input-height); */
+    height: auto;
+    overflow-y: auto;
+}
+
+.selection{
+    display: flex;
+    height: fit-content;
+    margin-right: 0px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    width: 100% !important;
+    height: var(--modal-input-height) !important;
+    outline: none;
+    border: none !important;
+    background-color: transparent;
+    border: 1px solid var(--textbox-border) !important;
+    border-radius: 5px;
+    color: var(--dark-gray-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    outline: none;
+    padding: 0px 30px 0px 30px;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.select2-container--default
+.select2-selection--single
+.select2-selection__arrow b {
+    background-image: url(../img-new/select-arrow.svg);
+    border: transparent !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 10px !important;
+    width: 10px !important;
+    transition: .5s all;
+    left: unset !important;
+    margin-left: unset !important;
+    margin-top: unset !important;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b{
+    transform: rotate(180deg);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: unset !important;
+    margin-top: -7px;
+    right: 10px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-top: 0px;
+    font-size: 14px;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 4px 6px 0px #A0B5BE52;
+    margin-right: 0px;
+}
+
+.select2-container--open .select2-dropdown--above{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 4px 6px 0px #A0B5BE52;
+}
+
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--single, 
+.select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+span.select2-dropdown {
+    min-width: 150px;
+    max-width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0px 4px 4px 0px #A0B5BE73;
+    background-color: var(--table-bgcolor);
+    border-radius:5px;
+    border: 1px solid var(--textbox-border);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.select2-results__option {
+    border-radius: 0.5rem;
+    transition: background-color 300ms ease 0s, color 300ms ease 0s;
+    margin-bottom: 20px;
+}
+
+.select2-results__option:last-child{
+    margin-bottom: 0px;
+}
+
+.select2-container--default .select2-results>.select2-results__options{
+    max-height: 100%;
+    overflow: auto;
+}
+
+.select2-container--default
+.select2-results__option--highlighted[aria-selected] {
+    background-color: var(--table-border) !important;
+    color: var(--gray-color) !important;
+}
+
+span.select2-dropdown .select2-search--dropdown {
+    display: none;
+    padding: 0;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+/* CUSTOM SELECT BOX CSS :: ENDS */
+
+/* CUSTOM DATE PICKER CSS :: STARTS */
+.daterangepicker{
+    box-shadow: var(--table-box-shadow);
+    color: var(--dark-gray-color);
+    background-color: var(--table-bgcolor);
+    border-radius: 5px;
+    border: 1px solid var(--textbox-border);
+}
+
+.daterangepicker .calendar-table {
+    border: 1px solid var(--table-border);
+    border-radius: 4px;
+    background-color: var(--table-bgcolor);
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date{
+    background-color: transparent;
+}
+
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td{
+    color: var(--gray-color);
+}
+
+.daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span{
+    border:solid var(--gray-color);
+    border-width: 0 2px 2px 0;
+}
+
+.daterangepicker td.in-range{
+    background-color: var(--table-border);
+}
+
+.daterangepicker:after {
+    border-bottom: 6px solid var(--table-bgcolor);
+}
+
+.daterangepicker .ranges li:hover,
+.daterangepicker .ranges li.active{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.daterangepicker td.active, .daterangepicker td.active:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drp-selected{
+    border: 1px solid var(--textbox-border);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    float: left;
+}
+
+.daterangepicker .drp-buttons .btn{
+    height: 40px;
+    padding: 10px 20px;
+    background-color: var(--light-stroke);
+    color: var(--gray-color);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0em;
+    width: fit-content;
+    text-decoration: none;
+}
+
+
+button.applyBtn.btn.btn-sm.btn-primary{
+    background-color: var(--primary-color) !important;
+    color: var(--white-color) !important; 
+}
+
+.daterangepicker.show-ranges.ltr .drp-calendar.left{
+    border-left: 1px solid var(--textbox-border);
+}
+
+.daterangepicker .drp-buttons{
+    border-top: 1px solid var(--textbox-border);
+}
+
+.daterangepicker .drp-buttons{
+    padding: 15px 10px;
+}
+/* CUSTOM DATE PICKER CSS :: ENDS */
+
+/* TOOLTIP CSS :: STARTS */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px 40px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 150%;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    max-width: 650px;
+    min-width: 650px;
+}
+
+.tooltip .tooltiptext p{
+    margin-bottom: 15px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 4%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+  /* TOOLTIP CSS :: ENDS */
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    box-shadow: unset;
+}
+
+::-webkit-scrollbar-track:horizontal {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--light-stroke);
+}
+
+.date-range{
+    background-color:var(--white-color) !important;
+}
+#test .date-range{
+    padding-right: 5px !important;
+}
+#from-to-date-span, #from-to-date-range .js-date-range__value {
+    font-size: 14px !important; 
+    /* color: var(--light-gray) !important; */
+}
+[data-theme="dark"] .date-range {
+    background-color: transparent !important;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background-color: var(--table-border);
+}
+/* SCROLLBAR */
+
+/* CHART CSS :: STARTS */
+.chart .pagination__list li span{
+    color: var(--dark-gray-color);
+}
+/* CHART CSS :: ENDS */
+
+/* ACCORDION CSS :: STARTS */
+.accordion{
+    overflow: visible;
+}
+
+.accordion__header .icon {
+    height: 16px;
+    width: auto;
+}
+/* ACCORDION CSS:: ENDS */
+
+
+/* ERROR MESSAGE CSS :: STARTS */
+#error_msg,
+.error_msg {
+    border: 1px solid var(--error-msg);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #FBEBEB;
+    color: var(--error-msg) !important;
+    display: block;
+}
+
+#success_msg {
+    border: 1px solid var(--green-color);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #ebfbf7;
+    color: var(--green-color) !important;
+    display: block;
+}
+/* ERROR MESSAGE CSS :: ENDS */
+
+/* SEARCHBAR CSS :: STARTS */
+.search-bar{
+    position: relative;
+    width: 200px;
+}
+
+.search-bar input{
+    border: 1px solid var(--textbox-border);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--dark-gray-color);
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    font-size: 14px;
+    height: var(--table-input-height);
+    width: 100%;
+    padding-left: 40px !important;
+    letter-spacing: .7px;
+}
+
+.search-bar input::placeholder{
+    color: var(--light-gray);
+}
+
+.search-bar img{
+    position: absolute;
+    left: 15px;
+    margin-bottom: 3px;
+}
+/* SEARCHBAR CSS :: ENDS */
+
+/* CHART TOOLTIP CSS :: STARTS */
+.chart--area .chart__tooltip,
+.chart--column .chart__tooltip {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    box-shadow: 0 0.9px 1.5px rgba(0, 0, 0, 0.03), 0 3.1px 5.5px rgba(0, 0, 0, 0.08), 0 14px 25px rgba(0, 0, 0, 0.12);
+    background-color: var(--black-color);
+    border-radius: 10px;
+    padding: var(--space-sm);
+    color: var(--white-color);
+}
+
+.chart--area .chart__tooltip::after,
+.chart--column .chart__tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--black-color) transparent transparent;
+}
+
+.chart--column .chart__tooltip p span{
+    width: 12px;
+    height: 12px;
+    display: block;
+}
+
+.chart--column .chart__tooltip::after{
+    top: 80%;
+}
+
+.chart--area .chart__tooltip span{
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+/* CHART TOOLTIP CSS :: ENDS */
+
+/* DARK THEME CSS :: STARTS */
+[data-theme="dark"] .custom-checkbox  .checkmark {
+    background-color: var(--table-border);
+}
+
+[data-theme="dark"] .select2-container--default .select2-selection--single,
+[data-theme="dark"] .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: var(--gray-color);
+}
+
+[data-theme="dark"].chart--area .chart__tooltip,
+[data-theme="dark"] .chart--column .chart__tooltip  {
+    background-color: var(--table-border);
+}
+
+[data-theme="dark"] .chart--area .chart__tooltip::after,
+[data-theme="dark"] .chart--column .chart__tooltip::after {
+    border-color:  transparent var(--table-border) transparent transparent;
+}
+/* DARK THEME CSS :: ENDS */
+
+.select2-container--default .select2-selection--multiple{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    overflow: auto;
+    max-height: 100px;
+    min-height: 45px;
+    background-color: var(--table-bgcolor) !important;
+}
+.select2-container--default .select2-search--inline .select2-search__field{
+    margin: 0;
+    border: 0 !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    padding: 0 1px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    font-size: 14px;
+    padding: 2px 5px 0 !important;
+    height: fit-content;
+}
+
+.select2-container .select2-selection--multiple{
+    /* height: var(--modal-input-height); */
+    height: auto;
+    overflow: auto;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--table-border) !important;
+    border: 1px solid var(--textbox-border) !important;
+    color: var(--gray-color) !important;
+}
+
+.select2-container .select2-search--inline{
+    height: 100%;
+    width: fit-content;
+    float: unset;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.select2-selection__rendered{
+    width: fit-content !important;
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap;
+}
+
+.select2-container .select2-search--inline .select2-search__field{
+    margin-top: 0 !important;
+    height: var(--modal-input-height) !important;
+    padding: 0px 5px 0 15px !important;
+}
+
+.tab-data{
+    padding: 0 10px;
+}
+
+/* MEDIA QUERY :: STARTS */
+@media only screen and (max-width: 600px){
+    .hide-md{
+        display: block;
+        position: relative;
+        top: 5px;
+        left: -10px;
+    }
+
+    .guest-template-header .qb-logo{
+        max-height: 55px;
+        width: auto;
+    }
+
+    .filename, .drag-file-text {
+        font-size: 10px;
+    }
+
+    .new-file-upload .uploadFile {
+        padding-left: 110px !important;
+    }
+
+    .form input, 
+    .select2-search__field, 
+    .form select, 
+    .form textarea, 
+    .form .input-type-date, 
+    .date-range,
+    .select2-container--default .select2-selection--single {
+        padding: 0px 15px;
+    }
+
+    .qb-connect{
+        flex-wrap: wrap;
+        margin-top: 0px !important;
+        padding-top: 0px;
+    }
+
+    .qb-connect .padding-set-form{
+        padding-left: 0px !important;
+    }
+    
+    .main-content-container{
+        padding: 20px;
+    }
+
+    .tooltip .tooltiptext {
+        min-width: 310px !important;
+        max-width: 100% !important;
+        right: -88%;
+        left: unset;
+        top: 100%;
+    }
+
+    .app-ui__header{
+        background-color: var(--table-bgcolor);
+        margin-top: 0px !important;
+        height: 60px;
+        padding-bottom: 20px;
+        top: 0px;
+        position: fixed;
+        z-index: 999;
+        border-radius: 0px 0px 10px 10px;
+        border: 1px solid var(--table-border);
+        width: 100%;
+    }
+
+    .main-content-container{
+        margin-top: 65px;
+    }
+    
+    .ticket-structure{
+        flex-wrap: wrap !important;
+        gap: 5px !important;
+    }
+
+    .section-heading{
+        margin-bottom: 10px;
+    }
+
+    .analytics-dashboard .date-range {
+        height: 30px !important;
+    }
+
+    .analytics-dashboard #from-to-date-span{
+        font-size: 12px !important; 
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    /* .hide-md{
+        display: block;
+        position: relative;
+        top: 8px;
+    } */
+
+    .int-table__cell .view-asset{
+        margin-right: 20px;
+    }
+
+    .width-70{
+        width: 100% !important;
+    }
+
+}
+
+@media only screen and (max-width: 1600px) {    
+     /* HEADER CSS :: STARTS */
+     header{
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .switch{
+        /* height: 25px !important;
+        width: 48px !important; */
+        height: 20px !important;
+        width: 45px !important;
+    }
+
+    .switch__marker{
+        /* height: 19px !important;
+        width: 19px !important;
+        left: 5px !important; */
+        height: 15px !important;
+        width: 15px !important;
+        left: 5px !important;
+        top: 0.2px;
+    }
+
+    .switch__marker{
+        /* left: 25px !important; */
+        left: 28px !important;
+    }
+
+    .switch__input:checked+.switch__label+.switch__marker {
+        left: 5px !important;
+    }
+
+    .hide-on-dark{
+        left: 4px !important;
+    }
+
+    .switch svg{
+        height: 13px;
+    }
+
+    .hide-on-light{
+        right: 5px !important;
+    }
+
+    .app-ui__user-btn p {
+        font-size: 15px;
+    }
+
+    .app-ui__user-btn img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .app-ui__user-btn {
+        gap: 10px;
+    }
+    /* HEADER CSS :: ENDS */ 
+
+    .heading{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-subheading {
+        font-size: 15px; 
+        padding: 15px 35px;
+    }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
+    ::-webkit-scrollbar:horizontal {
+        height: 2px;
+    }
+    /* SCROLLBAR */
+
+    .tooltip .tooltiptext {
+        max-width: 450px;
+        min-width: 450px;
+        font-size: 14px;
+    }
+
+    .system-setting-header{
+        font-size: 22px;
+    }
+
+    .custom-checkbox input:checked ~ .checkmark:after{
+        top: 3px;
+    }
+
+    .custom-checkbox .checkmark:after {
+        width: 7px;
+        height: 12px;
+    }
+
+    .custom-checkbox,
+    .custom-checkbox .checkmark{
+        width: 20px;
+        height: 20px;
+    }
+
+    /* ON OFF TEXT IN SWITCH CSS :: STARTS */
+    .balance-section .switch__marker::after {
+        left: 21px;
+        font-size: 11px;
+        top: 3px;
+    }
+
+    .balance-section .switch__marker::before {
+        right: 19px;
+        font-size: 11px;
+        top: 3px;
+    }
+    /* ON OFF TEXT IN SWITCH CSS :: ENDS */
+}
+@media screen and (max-width: 325px) {
+    .date-picker--is-visible{
+        width: 250px;
+        overflow: auto;
+    }
+    .date-picker__week{
+        flex-wrap: nowrap;
+    }
+}
+/* MEDIA QUERY :: ENDS */

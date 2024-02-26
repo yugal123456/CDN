@@ -1,0 +1,21 @@
+/* -------------------------------- 
+
+File#: _2_changelog
+Title: Changelog
+Descr: A list of updates, grouped by release date
+Usage: codyhouse.co/license
+
+-------------------------------- */
+@media (min-width: 64rem) {
+    .changelog__metadata {
+        position: -webkit-sticky;
+        position: sticky;
+        top: var(--space-sm);
+    }
+}
+
+.changelog__separator {
+    height: 1px;
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.15);
+    margin: var(--space-lg) 0;
+}

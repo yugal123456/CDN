@@ -1,0 +1,112 @@
+/* -------------------------------- 
+
+File#: _1_number-input
+Title: Number input
+Descr: Number input field with custom increment buttons
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.number-input__btn {
+    display: none;
+}
+
+.number-input .form-control::-webkit-inner-spin-button,
+.number-input .form-control::-webkit-outer-spin-button {
+    display: none;
+}
+
+.number-input .form-control {
+    -moz-appearance: textfield;
+    display: block;
+}
+
+.number-input__btn {
+    display: flex;
+    background: var(--color-contrast-lower);
+}
+
+.number-input__btn:hover {
+    background-color: var(--color-contrast-low);
+}
+
+.number-input__btn:focus {
+    outline: none;
+    background-color: var(--color-primary);
+}
+
+.number-input__btn:focus .icon {
+    color: var(--color-white);
+}
+
+.number-input__btn:active {
+    background-color: hsl(var(--color-primary-h), var(--color-primary-s), calc(var(--color-primary-l) * 0.9));
+}
+
+.number-input__btn .icon {
+    --size: var(--number-input-icon-size, 12px);
+    display: block;
+    margin: auto;
+}
+
+.number-input--v1 {
+    --number-input-btn-width: 1.75em;
+    --number-input-btn-gap: 4px;
+    --number-input-btn-input-gap: var(--space-xxxs);
+    --number-input-icon-size: 8px;
+    position: relative;
+}
+
+.number-input--v1 .form-control {
+    padding-right: calc(var(--number-input-btn-width) + var(--number-input-btn-input-gap) * 2);
+    width: 100%;
+    height: 100%;
+}
+
+.number-input--v1 .number-input__btns {
+    position: absolute;
+    top: var(--number-input-btn-input-gap);
+    right: var(--number-input-btn-input-gap);
+    width: var(--number-input-btn-width);
+    height: calc(100% - var(--number-input-btn-input-gap) * 2);
+}
+
+.number-input--v1 .number-input__btn {
+    position: absolute;
+    width: 100%;
+    height: calc(50% - var(--number-input-btn-gap) / 2);
+    border-radius: var(--radius-sm);
+}
+
+.number-input--v1 .number-input__btn.number-input__btn--plus {
+    top: 0;
+}
+
+.number-input--v1 .number-input__btn.number-input__btn--minus {
+    bottom: 0;
+}
+
+.number-input--v2 {
+    --number-input-btn-width: 1.6em;
+    --number-input-btn-input-gap: var(--space-xxxs);
+    --number-input-icon-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.number-input--v2 .form-control {
+    margin: 0 var(--number-input-btn-input-gap);
+    order: 1;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.number-input--v2 .number-input__btn {
+    width: var(--number-input-btn-width);
+    height: var(--number-input-btn-width);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.number-input--v2 .number-input__btn--plus {
+    order: 2;
+}

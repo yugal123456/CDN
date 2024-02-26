@@ -1,0 +1,94 @@
+/* --------------------------------
+
+File#: _2_autocomplete
+Title: Autocomplete
+Descr: Autocomplete plugin for input elements
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+  --autocomplete-dropdown-vertical-gap: 4px;
+  /* gap between input and results list */
+  --autocomplete-dropdown-max-height: 150px;
+  --autocomplete-dropdown-scrollbar-width: 6px;
+  /* custom scrollbar width - webkit browsers */
+}
+
+.autocomplete__loader {
+  /* loader visible while searching */
+  /* CSS variables inherited from the circle-loader component */
+  --circle-loader-v1-size: 1em;
+  --circle-loader-v1-stroke-width: 2px;
+}
+
+.autocomplete:not(.autocomplete--searching) .autocomplete__loader {
+  /* .autocomplete--searching is used to show the loader element - added in JS */
+  display: none;
+}
+
+/* results dropdown  */
+.autocomplete__results {
+  position: absolute;
+  z-index: var(--z-index-popover, 5);
+  width: 100%;
+  left: 0;
+  top: calc(100% + var(--autocomplete-dropdown-vertical-gap));
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  /* slide in animation */
+  background-color: var(--color-bg-light);
+  box-shadow: var(--inner-glow), var(--shadow-md);
+  border-radius: var(--radius-md);
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0s 0.3s, -webkit-transform 0.3s var(--ease-in);
+  transition: opacity 0.3s, visibility 0s 0.3s, transform 0.3s var(--ease-in);
+  transition: opacity 0.3s, visibility 0s 0.3s, transform 0.3s var(--ease-in), -webkit-transform 0.3s var(--ease-in);
+  overflow: hidden;
+}
+.autocomplete--results-visible .autocomplete__results {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, -webkit-transform 0.3s var(--ease-out);
+  transition: opacity 0.3s, transform 0.3s var(--ease-out);
+  transition: opacity 0.3s, transform 0.3s var(--ease-out), -webkit-transform 0.3s var(--ease-out);
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.autocomplete__list {
+  max-height: var(--autocomplete-dropdown-max-height);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  /* custom scrollbar */
+}
+.autocomplete__list::-webkit-scrollbar {
+  /* scrollbar width */
+  width: var(--autocomplete-dropdown-scrollbar-width);
+}
+.autocomplete__list::-webkit-scrollbar-track {
+  /* progress bar */
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.08);
+  border-radius: 0;
+}
+.autocomplete__list::-webkit-scrollbar-thumb {
+  /* handle */
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.12);
+  border-radius: 0;
+}
+.autocomplete__list::-webkit-scrollbar-thumb:hover {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.2);
+}
+
+/* single result item */
+.autocomplete__item {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.autocomplete__item:hover {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+.autocomplete__item:focus {
+  outline: none;
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.15);
+}

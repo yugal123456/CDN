@@ -1,0 +1,75 @@
+/* -------------------------------- 
+
+File#: _1_circular-progress-bar
+Title: Circular Progress Bar
+Descr: Display the current progress of a task using a circular SVG shape
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --c-progress-bar-size: 140px;
+    --c-progress-bar-stroke-width: 6;
+}
+
+.c-progress-bar {
+    width: var(--c-progress-bar-size);
+}
+
+.c-progress-bar__shape {
+    width: 100%;
+    position: relative;
+}
+
+.c-progress-bar__shape svg {
+    display: block;
+    width: var(--c-progress-bar-size);
+    height: var(--c-progress-bar-size);
+    stroke-width: var(--c-progress-bar-stroke-width);
+}
+
+.c-progress-bar__bg {
+    stroke: currentColor;
+    opacity: 0.125;
+}
+
+.c-progress-bar__fill {
+    stroke: currentColor;
+}
+
+.c-progress-bar__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.c-progress-bar__value i {
+    font-size: 0.65em;
+}
+
+.c-progress-bar:not(.c-progress-bar--init) .c-progress-bar__fill,
+.c-progress-bar:not(.c-progress-bar--init) .c-progress-bar__value {
+    visibility: hidden;
+}
+
+.c-progress-bar--color-update {
+    --c-progress-bar-color-1: 30;
+    --c-progress-bar-color-2: 65;
+    --c-progress-bar-color-3: 100;
+}
+
+.c-progress-bar--color-update.c-progress-bar--init .c-progress-bar__fill {
+    transition: stroke 0.2s;
+}
+
+.c-progress-bar--fill-color-1 .c-progress-bar__fill {
+    stroke: var(--color-error);
+}
+
+.c-progress-bar--fill-color-2 .c-progress-bar__fill {
+    stroke: var(--color-warning);
+}
+
+.c-progress-bar--fill-color-3 .c-progress-bar__fill {
+    stroke: var(--color-success);
+}

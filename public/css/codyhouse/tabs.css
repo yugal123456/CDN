@@ -1,0 +1,26 @@
+/* -------------------------------- 
+
+File#: _1_tabs
+Title: Tabs
+Descr: A list of content sections (panels), accessible one at a time using control labels
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.tabs__control {
+    text-decoration: none;
+    color: var(--color-contrast-medium);
+}
+
+.tabs__control:focus {
+    outline: 2px solid hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+    outline-offset: 2px;
+}
+
+.tabs__control:hover {
+    color: var(--color-contrast-high);
+}
+
+.tabs__control[aria-selected=true] {
+    color: var(--color-contrast-high);
+    text-decoration: underline;
+}

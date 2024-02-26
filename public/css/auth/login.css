@@ -1,0 +1,277 @@
+#bdform {
+    font-family: "Roboto", Times, serif;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar-top {
+    height: 80px;
+    background: var(--color-primary);
+    width: 100%;
+    max-width: 100%;
+}
+
+#navbar-top img {
+    padding-top: 25px;
+    padding-left: 50px;
+    width: 25%;
+
+}
+
+.navbar-left {
+    float: left;
+    height: 100px;
+    padding-right: 0;
+    width: 65%;
+
+}
+
+.navbar-right {
+    float: right;
+    width: auto;
+    padding-top: 30px;
+    padding-right: 10px;
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    padding-right: 40px;
+    text-align: right;
+}
+
+.navbar-right a:hover {
+    text-decoration: underline;
+}
+
+.formMain {
+    width: 500px;
+    height: auto;
+    background: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+    display: block;
+    clear: both;
+    padding-bottom: 50px;
+}
+
+.formMain img {
+    border: 1px solid gray;
+    border-radius: 150px;
+    padding: 0 0 0 0;
+    width: 100px;
+    height: auto;
+    margin: 0 0 30px 0;
+}
+
+#error_msg {
+    border: 1px solid red;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: #FBEBEB;
+    color: red;
+    display: block;
+}
+
+.formMain input {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #a9a9a9;
+    background: #F2F2F2;
+    outline: none;
+    padding-left: 10px;
+}
+
+
+.formMain a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.formMain a:hover {
+    text-decoration: underline;
+}
+
+.formMain h2 {
+    color: var(--color-primary);
+    font-size: 30px;
+    margin-bottom: 50px;
+    text-transform: capitalize;
+    text-align: center;
+
+}
+
+.btn-login {
+    background: var(--color-primary);
+    color: white;
+    width: 95%;
+    padding: 15px;
+    border-radius: 30px;
+    clear: both;
+    border: 2px solid var(--color-primary);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.btn-login:hover {
+    background: #0FA8E9;
+    color: black;
+    border-radius: 30px;
+    background: white;
+    border: 2px solid #0FA8E9;
+}
+
+label {
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    display: block;
+    text-align: left;
+}
+
+.formMain .checkBoxForm {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    float: left;
+    margin-left: 10px;
+}
+
+.formMain .label_check_box {
+    float: left;
+    padding-top: 5px;
+}
+
+input::placeholder {
+    font-weight: normal;
+    opacity: 0.5;
+    color: black;
+    padding-left: 0;
+}
+
+@media screen and (max-width: 600px) {
+
+    #navbar-top {
+        width: 100%;
+
+    }
+
+    .navbar-left {
+        width: 180px;
+    }
+
+    .navbar-right {
+        width: auto;
+    }
+
+    .navbar-right a {
+        padding-right: 10px;
+        text-align: right;
+        text-size: 15px;
+    }
+
+    #navbar-top img {
+        padding: 30px 0 0 10px;
+        width: 90%;
+    }
+
+    .formMain {
+        padding: 10px 0 30px 5px;
+        width: 100%;
+        max-width: 480px;
+        margin: 10px auto;
+    }
+
+    .btn-login {
+        width: 95%;
+        padding: 15px 10px 15px 10px;
+        font-size: 18px;
+    }
+
+    .formMain input {
+        border-radius: 10px;
+        border: 1px solid #a9a9a9;
+        height: 50px;
+        width: 95%;
+        outline: none;
+    }
+
+    .formMain h2 {
+        width: 100%;
+        margin-top: 5px;
+        font-size: 1.2em;
+        margin-bottom: 40px;
+
+    }
+
+    label {
+        font-size: 16px;
+        padding-bottom: 10px;
+        display: block;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .label_check_box {
+        padding-left: 5px;
+    }
+
+    .formMain img {
+        width: 25%;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+    .navbar-left {
+        width: 350px;
+    }
+
+    .navbar-right {
+        width: auto;
+    }
+
+    #navbar-top img {
+        padding-top: 25px;
+        padding-left: 30px;
+        width: 65%;
+    }
+
+    .navbar-right a {
+        padding-right: 20px;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 350px) {
+    .navbar-left {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-right {
+        display: none;
+    }
+
+    #navbar-top img {
+        width: 65%;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .formMain {
+        width: 500px;
+        padding: 0 40px 40px 40px;
+
+    }
+
+
+}

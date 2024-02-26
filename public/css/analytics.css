@@ -1,0 +1,35 @@
+#paymentStatsChart{
+    padding:0px 10px;
+    position: relative;
+    z-index: 99;
+}
+
+.lineDiv{
+    width:100%;
+    /* padding : 0px 13% 30px 13%; */
+}
+
+.data-label{
+    top:40%;
+    bottom:0;
+    right:0;
+    left:0;
+    color: var(--dark-gray-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    top: -15px;
+}
+
+.doughnutDiv{
+    text-align: center;
+    width:70% !important;
+    margin:auto;
+}
+.order-tns{
+    font-size:10px;
+}

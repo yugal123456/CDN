@@ -1,0 +1,138 @@
+/* -------------------------------- 
+
+File#: _3_interactive-table
+Title: Interactive Table
+Descr: Table with the option of sorting data and selecting rows to perform specific actions
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.int-table {
+  overflow: hidden;
+  border-bottom: 2px solid var(--color-contrast-lower);
+}
+
+.int-table__inner {
+  position: relative;
+  overflow: auto;
+}
+.int-table__inner::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.int-table__inner::-webkit-scrollbar-track {
+  background-color: var(--color-contrast-lower);
+}
+.int-table__inner::-webkit-scrollbar-thumb {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.9);
+  border-radius: 50em;
+}
+.int-table__inner::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-contrast-higher);
+}
+
+.int-table__table {
+  width: 100%;
+}
+
+.int-table__header .int-table__cell {
+  background-color: var(--color-bg);
+  box-shadow: 0 2px 0 var(--color-contrast-lower);
+}
+
+.int-table__body .int-table__row {
+  border-bottom: 1px solid var(--color-contrast-lower);
+}
+.int-table__body .int-table__row:last-child {
+  border-bottom: none;
+}
+.int-table__body .int-table__row--checked {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.5);
+  border-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.25);
+}
+
+.int-table__cell {
+  padding: var(--space-xs);
+}
+
+.int-table__cell--th {
+  font-weight: 600;
+}
+
+.int-table__cell--sort {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.int-table__cell--sort:hover, .int-table__cell--sort:focus-within {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+.int-table__cell--sort:hover {
+  cursor: pointer;
+}
+
+.int-table__cell--focus {
+  background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.15);
+}
+
+.int-table__sort-icon .arrow-up, .int-table__sort-icon .arrow-down {
+  fill: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.3);
+}
+
+.int-table__cell--asc .int-table__sort-icon .arrow-up,
+.int-table__cell--desc .int-table__sort-icon .arrow-down {
+  fill: var(--color-contrast-higher);
+}
+
+.int-table__checkbox {
+  --custom-checkbox-size: 18px;
+  --custom-checkbox-marker-size: 16px;
+  display: block;
+  width: var(--custom-checkbox-size);
+  height: var(--custom-checkbox-size);
+}
+
+.int-table__menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+.int-table__menu-btn .icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.int-table__menu-btn:hover, .int-table__menu-btn.menu-control--active {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+}
+.int-table__menu-btn:active {
+  background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.075);
+}
+
+.int-table--sticky-header {
+  position: relative;
+  z-index: 1;
+}
+.int-table--sticky-header .int-table__inner {
+  max-height: 480px;
+}
+.int-table--sticky-header .int-table__header .int-table__cell {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.int-table-actions .menu-bar {
+  --menu-bar-button-size: 38px;
+  --menu-bar-icon-size: 16px;
+  --menu-bar-horizontal-gap: var(--space-xxxxs);
+  --menu-bar-vertical-gap: 4px;
+  --menu-bar-label-size: var(--text-xs);
+}
+.int-table-actions .menu-bar__icon {
+  color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.5);
+}

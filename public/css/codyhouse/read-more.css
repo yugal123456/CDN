@@ -1,0 +1,30 @@
+/* -------------------------------- 
+
+File#: _1_read-more
+Title: Read More
+Descr: A truncated paragraph with the option of reading more content
+Usage: codyhouse.co/license
+
+-------------------------------- */
+.read-more {
+    opacity: 0;
+}
+
+.read-more--loaded {
+    opacity: 1;
+}
+
+.read-more__btn {
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    color: var(--color-primary);
+    text-decoration: underline;
+}

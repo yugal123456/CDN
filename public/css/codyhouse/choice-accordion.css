@@ -1,0 +1,137 @@
+/* -------------------------------- 
+
+File#: _1_choice-accordion
+Title: Choice Accordion
+Descr: A group of radio/checkbox buttons controlling expandable content
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --choice-accordion-border-width: 1px;
+    --choice-accordion-border-radius: var(--radius-md);
+    --choice-accordion-input-size: 20px;
+    --choice-accordion-input-icon-size: 16px;
+    --choice-accordion-input-border-width: 1px;
+    --choice-accordion-input-margin-right: var(--space-xxs);
+}
+
+.choice-accordion {
+    border-width: var(--choice-accordion-border-width);
+    border-color: var(--color-contrast-lower);
+    border-style: solid;
+    border-radius: var(--choice-accordion-border-radius);
+    overflow: hidden;
+}
+
+.choice-accordion__btn {
+    display: grid;
+    grid-template-columns: var(--choice-accordion-input-size) 1fr;
+    grid-gap: var(--choice-accordion-input-margin-right);
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-bg-light);
+    border-top-width: var(--choice-accordion-border-width);
+    border-style: solid;
+    border-color: var(--color-contrast-lower);
+}
+
+.choice-accordion__item:first-child .choice-accordion__btn {
+    border-top: none;
+}
+
+.choice-accordion__panel {
+    position: relative;
+    background-color: var(--color-bg-dark);
+    overflow: hidden;
+    will-change: height;
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+}
+
+/* .choice-accordion__panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--choice-accordion-border-width);
+    background-color: var(--color-contrast-lower);
+    pointer-events: none;
+} */
+
+.choice-accordion__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg-light);
+    width: var(--choice-accordion-input-size);
+    height: var(--choice-accordion-input-size);
+    border-width: var(--choice-accordion-input-border-width);
+    border-style: solid;
+    border-color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), 0.65);
+    box-shadow: var(--shadow-xs);
+    transition: 0.2s;
+}
+
+.choice-accordion__input .icon {
+    color: var(--color-white);
+    font-size: var(--choice-accordion-input-icon-size);
+}
+
+.choice-accordion__btn:hover .choice-accordion__input {
+    border-color: hsla(var(--color-contrast-low-h), var(--color-contrast-low-s), var(--color-contrast-low-l), 1);
+}
+
+.choice-accordion__btn--checked .choice-accordion__input,
+.choice-accordion__btn--focus .choice-accordion__input,
+.choice-accordion__btn--checked:hover .choice-accordion__input,
+.choice-accordion__btn--focus:hover .choice-accordion__input {
+    border-color: var(--color-primary);
+}
+
+.choice-accordion__btn--checked .choice-accordion__input {
+    background-color: var(--color-primary);
+}
+
+.choice-accordion__btn--focus .choice-accordion__input {
+    box-shadow: var(--shadow-xs), 0 0 0 3px hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+}
+
+.choice-accordion__input--checkbox {
+    border-radius: 4px;
+}
+
+.choice-accordion__input--checkbox .icon>* {
+    transition: stroke-dashoffset 0.3s;
+    stroke-dasharray: 18;
+    stroke-dashoffset: 18;
+}
+
+.choice-accordion__btn--checked .choice-accordion__input--checkbox .icon>* {
+    stroke-dasharray: 18;
+    stroke-dashoffset: 0;
+}
+
+.choice-accordion__input--radio {
+    border-radius: 50%;
+}
+
+.choice-accordion__input--radio .icon {
+    transition: -webkit-transform 0.3s var(--ease-out-back);
+    transition: transform 0.3s var(--ease-out-back);
+    transition: transform 0.3s var(--ease-out-back), -webkit-transform 0.3s var(--ease-out-back);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.choice-accordion__btn--checked .choice-accordion__input--radio .icon {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.choice-accordion__fallback {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}

@@ -1,0 +1,161 @@
+/* -------------------------------- 
+
+File#: _2_menu-bar
+Title: Menu Bar
+Descr: Application menu with a list of common actions that users can perform
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --menu-bar-button-size: 2.5em;
+    --menu-bar-icon-size: 1em;
+    --menu-bar-horizontal-gap: var(--space-xxs);
+    --menu-bar-vertical-gap: 4px;
+    --menu-bar-label-size: var(--text-xs);
+}
+
+.menu-bar {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-bar__item {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--menu-bar-button-size);
+    width: var(--menu-bar-button-size);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-bar__item:not(:last-child) {
+    margin-right: var(--menu-bar-horizontal-gap);
+}
+
+.menu-bar__item:hover,
+.menu-bar__item.menu-control--active {
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+}
+
+.menu-bar__item:hover>.menu-bar__icon,
+.menu-bar__item.menu-control--active>.menu-bar__icon {
+    color: var(--color-contrast-higher);
+}
+
+.menu-bar__item:hover>.menu-bar__label,
+.menu-bar__item.menu-control--active>.menu-bar__label {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    width: auto;
+}
+
+.menu-bar__item:focus {
+    outline: none;
+    background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.1);
+}
+
+.menu-bar__item:active {
+    background-color: var(--color-contrast-low);
+}
+
+.menu-bar__item:focus:active {
+    background-color: hsla(var(--color-primary-h), var(--color-primary-s), var(--color-primary-l), 0.2);
+}
+
+.menu-bar__item--trigger {
+    display: none;
+}
+
+.menu-bar__icon {
+    display: block;
+    color: var(--color-contrast-high);
+    font-size: var(--menu-bar-icon-size);
+    transition: color 0.2s;
+}
+
+.menu-bar__label {
+    position: absolute;
+    z-index: var(--z-index-popover, 5);
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(var(--menu-bar-vertical-gap));
+    transform: translateX(-50%) translateY(var(--menu-bar-vertical-gap));
+    padding: var(--space-xxs) var(--space-xs);
+    color: var(--color-bg);
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.95);
+    border-radius: var(--radius-md);
+    font-size: var(--menu-bar-label-size);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.menu-bar--collapsed .menu-bar__item--hide {
+    display: none;
+}
+
+.menu-bar--collapsed .menu-bar__item--trigger {
+    display: inline-block;
+    display: flex;
+}
+
+.menu-bar {
+    opacity: 0;
+}
+
+.menu-bar::before {
+    display: none;
+    content: "collapsed";
+}
+
+.menu-bar--loaded {
+    opacity: 1;
+}
+
+@media (min-width: 32rem) {
+    .menu-bar--expanded\@xs::before {
+        content: "expanded";
+    }
+}
+
+@media (min-width: 48rem) {
+    .menu-bar--expanded\@sm::before {
+        content: "expanded";
+    }
+}
+
+@media (min-width: 64rem) {
+    .menu-bar--expanded\@md::before {
+        content: "expanded";
+    }
+}
+
+@media (min-width: 80rem) {
+    .menu-bar--expanded\@lg::before {
+        content: "expanded";
+    }
+}
+
+@media (min-width: 90rem) {
+    .menu-bar--expanded\@xl::before {
+        content: "expanded";
+    }
+}

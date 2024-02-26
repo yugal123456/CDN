@@ -1,0 +1,80 @@
+@supports (--css: variables) {
+    [data-theme="dark"] {
+        /* REDEFINE COLOR VALUES TO OLD VARIABLES */
+        --gray-color:#B0B0BB;
+        --green-color:#17c109;
+        --dark-gray-color:#DADAE9;
+        --textbox-border:#494955;
+        --body-background:#2B2B35;
+        --side-drawer-bg:#272732;
+        --table-bgcolor:#30303A;
+        --table-border:#494955;
+        --table-box-shadow:0px 2px 0px 0px #00000026;
+        --hide-show-icon-border:#2B2B35;
+        --hide-show-icon-bg:#3D5471;
+        --modal-box-shadow: 0px 3px 0px 0px #00000026;
+        /* NEW CREATED VARIABLES */
+        --dark-theme-button-bg:#454552;
+    }
+}
+
+
+[data-theme="dark"]{
+    --color-primary-darkest:hsl(240, 96.6%, 25.7%);
+    --color-warning-h:34;
+    --color-success-h:112;
+    --color-success-s:59%;
+    --color-success-l:69%;
+    --color-success-light-h:112;
+    --color-success-light-s:59%;
+    --color-success-light-l:76%;
+    --color-success-lighter-h:112;
+    --color-success-lighter-s:59%;
+    --color-success-lighter-l:85%;
+    --color-warning-darker-h:34;
+    --color-warning-darker-s:100%;
+    --color-warning-darker-l:54%;
+    --color-warning-darker-h:34;
+    --color-warning-darker-s:100%;
+    --color-warning-darker-l:54%;
+    --color-warning-dark-h:34;
+    --color-warning-dark-s:100%;
+    --color-warning-dark-l:61%;
+    --color-warning-light-h:34;
+    --color-warning-light-s:100%;
+    --color-warning-light-l:75%;
+    --color-warning-lighter-h:34;
+    --color-warning-lighter-s:100%;
+    --color-warning-lighter-l:80%;
+    --color-warning-lighter-h:34;
+    --color-warning-lighter-s:100%;
+    --color-warning-lighter-l:80%;
+    --color-error-darkest:red;
+    --color-error-darker:hsl(359, 100%, 49%);
+    --color-error-darker-h:359;
+    --color-error-darker-s:100%;
+    --color-error-darker-l:49%;
+    --color-error-dark:hsl(359, 100%, 61%);
+    --color-error-dark-h:359;
+    --color-error-dark-s:100%;
+    --color-error-dark-l:61%;
+    --color-error:hsl(359, 100%, 66%);
+    --color-error-h:359;
+    --color-error-s:100%;
+    --color-error-l:66%;
+    --color-error-light:hsl(359, 100%, 73%);
+    --color-error-light-h:359;
+    --color-error-light-s:100%;
+    --color-error-light-l:73%;
+    --color-error-lighter:hsl(359, 100%, 78%);
+    --color-error-lighter-h:359;
+    --color-error-lighter-s:100%;
+    --color-error-lighter-l:78%;
+}
+
+
+
+
+/* --ligh-gray:#A0B5BE;
+--light-primary-color:#05BFFF;
+--modal-bgcolor:#000000A6; */

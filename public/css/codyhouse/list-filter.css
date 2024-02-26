@@ -1,0 +1,429 @@
+/* -------------------------------- 
+
+File#: _1_list-filter
+Title: List Filter
+Descr: A list of filterable search items
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: system-ui, sans-serif;
+    color: hsl(230, 7%, 23%);
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    color: hsl(230, 13%, 9%);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.0736rem;
+}
+
+h2 {
+    font-size: 1.728rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+a {
+    color: hsl(250, 84%, 54%);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 64rem) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 3.051rem;
+    }
+
+    h2 {
+        font-size: 2.44rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5625rem;
+    }
+}
+
+/* variables */
+:root {
+    /* colors */
+    --lt3-color-primary-hsl: 250, 84%, 54%;
+    --lt3-color-bg-hsl: 0, 0%, 100%;
+    --lt3-color-contrast-high-hsl: 230, 7%, 23%;
+    --lt3-color-contrast-higher-hsl: 230, 13%, 9%;
+    --lt3-color-success-hsl: 170, 78%, 36%;
+    --lt3-color-warning-hsl: 35, 79%, 66%;
+    --lt3-color-error-hsl: 342, 89%, 48%;
+    --lt3-color-contrast-lower-hsl: 240, 4%, 85%;
+    --lt3-color-contrast-medium-hsl: 225, 4%, 47%;
+    --lt3-color-bg-light-hsl: 0, 0%, 100%;
+
+    /* spacing */
+    --lt3-space-4xs: 0.125rem;
+    --lt3-space-xs: 0.5rem;
+    --lt3-space-sm: 0.75rem;
+    --lt3-space-md: 1.25rem;
+
+    /* typography */
+    --lt3-text-sm: 0.833rem;
+}
+
+@media(min-width: 64rem) {
+    :root {
+        /* spacing */
+        --lt3-space-4xs: 0.1875rem;
+        --lt3-space-xs: 0.75rem;
+        --lt3-space-sm: 1.125rem;
+        --lt3-space-md: 2rem;
+
+        /* typography */
+        --lt3-text-sm: 1rem;
+    }
+}
+
+/* icons */
+.lt3-icon {
+    height: var(--lt3-size, 1em);
+    width: var(--lt3-size, 1em);
+    display: inline-block;
+    color: inherit;
+    fill: currentColor;
+    line-height: 1;
+    flex-shrink: 0;
+    max-width: initial;
+}
+
+.lt3-icon--2xs {
+    --lt3-size: 12px;
+}
+
+.lt3-icon--xs {
+    --lt3-size: 16px;
+}
+
+/* component */
+:root {
+    --list-filter-height: 240px;
+}
+
+.list-filter__form {
+    overflow: hidden;
+}
+
+.list-filter__search {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+
+.list-filter__search::-webkit-search-decoration,
+.list-filter__search::-webkit-search-cancel-button,
+.list-filter__search::-webkit-search-results-button,
+.list-filter__search::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+.list-filter__search::-ms-clear,
+.list-filter__search::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+.list-filter__search:focus {
+    outline: none;
+}
+
+.list-filter__search:focus+.list-filter__focus-marker {
+    opacity: 1;
+}
+
+.list-filter__search:-moz-placeholder-shown~.list-filter__search-cancel-btn {
+    display: none;
+}
+
+.list-filter__search:-ms-input-placeholder~.list-filter__search-cancel-btn {
+    display: none;
+}
+
+.list-filter__search:placeholder-shown~.list-filter__search-cancel-btn {
+    display: none;
+}
+
+.list-filter__search-cancel-btn {
+    /* custom search cancel button */
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    color: hsl(var(--lt3-color-contrast-medium-hsl));
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.list-filter__search-cancel-btn:hover {
+    opacity: 0.85;
+}
+
+.list-filter__focus-marker {
+    display: block;
+    height: 1em;
+    width: 3px;
+    background-color: hsl(var(--lt3-color-primary-hsl));
+    position: absolute;
+    left: 0;
+    top: calc(50% - 0.5em);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.list-filter__list-wrapper {
+    position: relative;
+    height: var(--list-filter-height);
+}
+
+.list-filter__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.list-filter__item {
+    display: flex;
+    align-items: center;
+    cursor: default;
+    transition: background-color 0.2s;
+}
+
+.list-filter__item:hover {
+    background-color: hsla(var(--lt3-color-contrast-higher-hsl), 0.075);
+}
+
+.list-filter__status {
+    display: block;
+    flex-shrink: 0;
+    --lt3-size: 8px;
+    width: var(--lt3-size);
+    height: var(--lt3-size);
+    border-radius: 50%;
+}
+
+.list-filter__item--user-active .list-filter__status {
+    background-color: hsl(var(--lt3-color-success-hsl));
+}
+
+.list-filter__item--user-active .list-filter__status::after {
+    content: "user active";
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.list-filter__item--user-pending .list-filter__status {
+    background-color: hsl(var(--lt3-color-warning-hsl));
+}
+
+.list-filter__item--user-pending .list-filter__status::after {
+    content: "user pending";
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+}
+
+.list-filter__action-btn {
+    display: flex;
+    flex-shrink: 0;
+    background-color: hsl(var(--lt3-color-bg-hsl));
+    border: 1px solid hsla(var(--lt3-color-contrast-higher-hsl), 0.15);
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.list-filter__action-btn .lt3-icon {
+    margin: auto;
+}
+
+.list-filter__action-btn:hover {
+    border-color: hsl(var(--lt3-color-error-hsl));
+    color: hsl(var(--lt3-color-error-hsl));
+}
+
+/* utility classes */
+.lt3-margin-top-sm {
+    margin-top: var(--lt3-space-sm);
+}
+
+.lt3-color-contrast-medium {
+    --lt3-color-o: 1;
+    color: hsla(var(--lt3-color-contrast-medium-hsl), var(--lt3-color-o, 1));
+}
+
+.lt3-text-right {
+    text-align: right;
+}
+
+.lt3-text-sm {
+    font-size: var(--lt3-text-sm);
+}
+
+.lt3-padding-md {
+    padding: var(--lt3-space-md);
+}
+
+.lt3-hide {
+    display: none !important;
+}
+
+.lt3-margin-left-auto {
+    margin-left: auto;
+}
+
+.lt3-padding-y-4xs {
+    padding-top: var(--lt3-space-4xs);
+    padding-bottom: var(--lt3-space-4xs);
+}
+
+.lt3-text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lt3-margin-right-xs {
+    margin-right: var(--lt3-space-xs);
+}
+
+.lt3-padding-sm {
+    padding: var(--lt3-space-sm);
+}
+
+.lt3-block {
+    display: block;
+}
+
+.lt3-right-sm {
+    right: var(--lt3-space-sm);
+}
+
+.lt3-border-bottom {
+    --lt3-border-o: 1;
+    border-bottom: var(--lt3-border-width, 1px) var(--lt3-border-style, solid) hsla(var(--lt3-color-contrast-lower-hsl), var(--lt3-border-o, 1));
+}
+
+.lt3-position-relative {
+    position: relative;
+}
+
+:where(.lt3-inner-glow) {
+    position: relative;
+}
+
+.lt3-inner-glow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.075);
+}
+
+.lt3-shadow-sm {
+    box-shadow: 0 0.3px 0.4px rgba(0, 0, 0, 0.025), 0 0.9px 1.5px rgba(0, 0, 0, 0.05), 0 3.5px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lt3-radius-md {
+    border-radius: 0.25em;
+}
+
+.lt3-bg-light {
+    --lt3-bg-o: 1;
+    background-color: hsla(var(--lt3-color-bg-light-hsl), var(--lt3-bg-o, 1));
+}
+
+.lt3-border-contrast-lower {
+    --lt3-border-o: 1;
+    border-color: hsla(var(--lt3-color-contrast-lower-hsl), var(--lt3-border-o, 1));
+}

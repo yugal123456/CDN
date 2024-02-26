@@ -1,0 +1,118 @@
+/* -------------------------------- 
+
+File#: _1_diamond-grid
+Title: Diamond Grid
+Descr: Diamond shaped image gallery
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --diamond-grid-gap: 10px;
+}
+
+.diamond-grid {
+    position: relative;
+    z-index: 1;
+}
+
+.diamond-grid__inner {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-transform: scale(0.71) rotate(-45deg);
+    transform: scale(0.71) rotate(-45deg);
+}
+
+.diamond-grid__item {
+    position: relative;
+    display: block;
+    width: calc(50% - var(--diamond-grid-gap)/2);
+    padding-bottom: calc(50% - var(--diamond-grid-gap)/2);
+    overflow: hidden;
+}
+
+.diamond-grid__item:nth-child(1),
+.diamond-grid__item:nth-child(3) {
+    margin-right: var(--diamond-grid-gap);
+}
+
+.diamond-grid__item:nth-child(1),
+.diamond-grid__item:nth-child(2) {
+    margin-bottom: var(--diamond-grid-gap);
+}
+
+.diamond-grid__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -webkit-transform: scale(1.414) rotate(45deg);
+    transform: scale(1.414) rotate(45deg);
+}
+
+.diamond-grid__item--link {
+    text-decoration: none;
+}
+
+.diamond-grid__item--link::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0);
+    transition: 0.3s;
+}
+
+.diamond-grid__item--link:hover::after {
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.85);
+}
+
+.diamond-grid__item--link:hover .diamond-grid__icon :nth-child(1),
+.diamond-grid__item--link:hover .diamond-grid__icon :nth-child(2) {
+    opacity: 1;
+}
+
+.diamond-grid__item--link:hover .diamond-grid__icon :nth-child(1) {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.diamond-grid__item--link:hover .diamond-grid__icon :nth-child(2) {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+
+.diamond-grid__icon {
+    position: absolute;
+    z-index: 2;
+    font-size: var(--size);
+    top: calc(50% - 0.5em);
+    left: calc(50% - 0.5em);
+    -webkit-transform: scale(1.4) rotate(45deg);
+    transform: scale(1.4) rotate(45deg);
+}
+
+.diamond-grid__icon :nth-child(1),
+.diamond-grid__icon :nth-child(2) {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transition: opacity 0.3s, -webkit-transform 0.3s var(--ease-out);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out);
+    transition: opacity 0.3s, transform 0.3s var(--ease-out), -webkit-transform 0.3s var(--ease-out);
+}
+
+.diamond-grid__icon :nth-child(1) {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+
+.diamond-grid__icon :nth-child(2) {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+}

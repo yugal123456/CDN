@@ -1,0 +1,4154 @@
+@import url(global.css);
+
+/* LOGIN CSS :: STARTS */
+.login-form input[type="text"],
+.login-form  input[type="password"],
+.login-form  input[type="email"]{
+    width: 100% !important;
+    height: var(--inputbox-height) !important;
+    outline: none;
+    border: none !important;
+    background-color: var(--white-color) !important;
+    border: 1px solid var(--textbox-border) !important;
+    border-radius: 5px;
+    padding-left: 48px;
+    color: var(--dark-gray-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    outline: none;
+    letter-spacing: .7px;
+}
+
+.login-form input[type="text"]::placeholder,
+.login-form  input[type="password"]::placeholder,
+.login-form  input[type="email"]::placeholder,
+textarea::placeholder{
+    color: var(--light-gray);
+}
+
+/* .downtrade{
+    color:#FF291C !important;
+} */
+
+.place{
+  color: #a0b5be!important;
+}
+
+.main-container{
+    background: var(--radial-gradient);
+}
+
+.login-form{
+    background-color: var(--white-color);
+    border-radius: 30px;
+    width: 550px;
+    max-width: 90%;
+    height: fit-content;
+    padding: 40px 50px;
+    box-shadow: 6px 14px 34px 0px #0000004D;
+}
+
+.login-form .welcome-text{
+    color: var(--dark-gray-color);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+
+.curser_pointer{
+    cursor: pointer;
+}
+
+.login-form .logo-container{
+    margin-bottom: 40px;
+    gap: 15px;
+    color: var(--dark-gray-color);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 56px;
+    letter-spacing: 0em;
+}
+
+.login-form .input-filed img{
+    left: 15px;
+}
+
+
+.login-form .input-filed .eye_button{
+    right: 15px;
+    left: unset;
+}
+
+.input-filed i{
+    right: 15px;
+    cursor: pointer;
+    color: var(--primary-color);
+    font-size: 20px !important;
+}
+
+.login-form  .label{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    margin-bottom: 5px;
+}
+
+.remember-section label,
+.remember-section a{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.remember-section a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.login-form button{
+    height: var(--button-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+    font-size: 22px;
+    font-weight: 500;
+    /* line-height: 35px; */
+    letter-spacing: 0em;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    gap: 10px;
+    text-decoration: none;
+}
+
+.login-form .back-to-login a{
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+}
+
+.contact-us{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.contact-us a{
+    color: var(--primary-color);
+}
+
+.form-footer,
+.form-footer p a{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0.015em;
+    gap: 10px;
+}
+
+.form-footer p {
+    gap: 8px;
+}
+/* LOGIN CSS :: ENDS */
+
+/* SIDE NAVIGATIONBAR CSS :: STARTS */
+a.app-ui__logo{
+    content: url(../img-new/logo-full.svg);
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden a.app-ui__logo{
+    content: url(../img-new/logo-sm.svg);
+    margin-top: 10px;
+    width: auto;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item--expanded .sidenav__list {
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-left: 0px;
+}
+
+.app-ui__nav{
+    position:fixed;
+    top:0;
+    left:0;
+    overflow:auto;
+    -webkit-overflow-scrolling:touch;
+    flex-direction:column;
+    z-index:1;
+    display:none;
+    overflow: visible;
+    border-radius: 0px 30px 30px 0px;
+    background-color: var(--side-drawer-bg);
+}
+
+  .sidenav{
+    padding: 5px 30px 5px 30px;
+    overflow-y: scroll;
+}
+
+.hide-show-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 6px solid var(--hide-show-icon-border);
+    background-color: var(--hide-show-icon-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    right: -15px;
+    top: 8px;
+    z-index: 999;
+}
+
+/* DROPDOWN :: STARTS */
+.sidenav__list .sidenav__list{ 
+    display:none
+} 
+
+.sidenav__item{
+    position:relative;
+    cursor:pointer;
+}
+
+.sidenav__item .arrow-down{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    transition: .3s;
+}
+
+.sidenav__item--expanded .sidenav__list{
+    display:flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 15px;
+    margin-top: 0px;
+}
+
+.sidenav__item--expanded .sidenav__list a span{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.02em; 
+    color: var(--gray-color);
+    margin-left: 20px;
+}   
+
+.sidenav__item--expanded .sidenav__list a::before{
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 100%;
+    background-color: var(--light-gray);
+}
+
+.sidenav__item--expanded .arrow-down{
+    transform:rotate(180deg)
+}
+
+.sidenav__link.active .sidenav__text {
+    color: var(--dark-gray-color) !important;
+    font-weight: 600;
+}
+
+.sidenav__link.active #no-fill path{
+    stroke: var(--primary-color);
+}
+
+.sidenav__link.active svg path{
+    fill: var(--primary-color);
+}
+
+.sidenav__link.active #plug::before{
+    background-color: var(--primary-color);
+}
+
+/* DROPDOWN :: ENDS */
+
+.sidenav__list{
+    gap: 2px;
+}
+
+.sidenav__link{
+    text-decoration:none;
+    color:var(--gray-color);
+    transition:.2s;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    gap: 15px;
+    height: var(--sidenav-list-item-height);
+}
+
+.sidenav__text{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    margin-top: 3px;
+} 
+
+.sidenav__label{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: var(--black-color);
+    margin-top: 20px;
+}
+
+.sidenav__divider{
+    height:1.5px;
+    background-color:var(--light-stroke);
+    left: 0;
+    right: 0;
+}
+
+.balance-info-box .accordion__header  {
+    background:var(--primary-gradient);
+    min-height: 55px;
+    max-height: fit-content;
+    border-radius: 10px;
+    padding: 4px 10px 0;
+    color: var(--white-color);
+    /* overflow: hidden; */
+}
+
+.balance-info-box .accordion__header::after{
+    content: '';
+    position: absolute;
+    background: linear-gradient(117.04deg, rgba(0, 190, 242, 0.72) 14.13%, rgba(0, 75, 190, 0.72) 81.01%);
+}
+
+.accordion:has(.balance-info-box){
+    box-shadow: 0px 10px 25px rgba(10, 158, 242, 0.30) !important;
+}
+
+.balance-info-box .accordion__header  h4{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    color: var(--white-color);
+    margin-bottom: 5px;
+    word-break: break-all;
+}
+
+.balance-info-box .accordion__header span{
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    margin-right: 5px;
+    word-break: break-all;
+}
+
+.balance-info-box .accordion__header .plus{
+    width: 25px;
+    height: 25px;
+    background: var(--primary-color);
+    border-radius: 5px;
+    right: 10px;
+    top: 10px;
+    box-shadow: -4px 5px 9px 0px #00000033;
+}
+
+.balance-info-box .low-balance-indicator{
+    top: -8px;
+    left: -8px;
+    z-index: 99;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .low-balance-indicator{
+    right: 0px;
+    left: unset;
+    top: -12px;
+}
+
+.balance-info-box .low-balance-indicator img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+.active-link .sidenav__text{
+    color: var(--dark-gray-color) !important;
+    font-weight: 400 !important;
+}
+
+.active-link::before {
+    background-color: var(--white-color) !important;
+    border: 2px solid var(--primary-color);
+    height: 4px !important;
+    width: 4px !important;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active #no-fill path{
+    stroke: var(--white-color);
+}
+
+#no-fill,
+#no-fill path{
+    fill: transparent !important;
+}
+
+.app-ui--nav-expanded .app-ui__nav{
+    display:flex
+}
+
+.app-ui--nav-expanded .app-ui__nav>*{
+    -webkit-animation:app-ui-nav-animation 0.5s var(--ease-out);
+    animation:app-ui-nav-animation 0.5s var(--ease-out)
+}
+
+.app-ui--nav-expanded .app-ui__menu-btn .icon__group>*:nth-child(1){
+    transform:translateY(6px) rotate(-45deg)
+}
+
+.app-ui--nav-expanded .app-ui__menu-btn .icon__group>*:nth-child(2){
+    stroke-dashoffset:24
+}
+
+.app-ui--nav-expanded .app-ui__menu-btn .icon__group>*:nth-child(3){
+    transform:translateY(-6px) rotate(45deg)
+} 
+
+.app-ui__body{
+    position:relative;
+    z-index:1;
+    min-height:calc(100vh - var(--app-ui-header-height));
+    /* background-color:var(--color-contrast-lower) */
+} 
+
+/* SIDE NAVIGATIONBAR CSS :: ENDS */
+
+/* NARROW SIDE NAVIGATIONBAR CSS :: STARTS */
+
+.app-ui__nav.js-app-ui__nav.is-hidden{
+    width: 80px !important;
+    display: flex !important;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav{
+    padding: 0px;
+    padding-bottom: 30px !important;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__text{
+    display: none;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .arrow-down{
+    top: 0px;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link{
+    justify-content: center;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active{
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active + .arrow-down{
+    top: 20px;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active + .arrow-down svg path{
+    fill: var(--white-color) !important;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active #plug::before {
+    background-color: var(--white-color);
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__item .sidenav__link.active svg path{
+    fill: var(--white-color);
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .sidenav__label{
+    text-align: center;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .accordion__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .hide-on-narrow{
+    display: none;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .accordion__header .plus{
+    position: unset !important;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .accordion__header h4{
+    font-size: 84%;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .accordion__header span{
+    font-size: 13px;
+    margin-right: 0px;
+    display: block;
+}
+
+.app-ui__nav.js-app-ui__nav.is-hidden .balance-info-box .text-left{
+    text-align: center;
+}
+
+/* NARROW SIDE NAVIGATIONBAR CSS :: ENDS */
+
+/* HEADER CSS :: STARTS */
+
+.app-ui__header{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 15px;
+}
+
+.app-ui__header .header-options{
+    gap: 20px;
+}
+
+.js .dropdown__menu{
+    background-color: var(--table-bgcolor);
+}
+
+.dropdown__separator{
+    height:1px;
+    background-color:var(--table-border);
+}
+
+.app-ui__user-btn{
+    gap: 20px;
+    text-decoration: none;
+}
+
+.app-ui__user-btn img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.app-ui__user-btn p{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.profile-dropdown{
+    background-color: var(--table-bgcolor);
+    box-shadow: var(--table-box-shadow);
+    border: 1px solid var(--table-bgcolor);
+    border: 5px;
+    z-index: 99;
+}
+
+/* HEADER CSS :: ENDS */
+
+/* MAIN CONTAINER CSS :: START */
+.app-ui__body{
+    position:relative;
+    z-index:1;
+    overflow-x: hidden !important;
+}
+/* MAIN CONTAINER CSS :: ENDS */
+
+/* TABLE CSS :: STARTS */
+.stats-card .table-header{
+    padding:20px 35px 25px 35px;
+    border-bottom: 1px solid var(--table-border);
+}
+
+.table-header-button {
+    gap: 15px;
+}
+
+.stats-card .table-options{
+    gap: 15px;
+}
+
+.stats-card .table-header button{
+    width: fit-content;
+    padding:0px 20px;
+    height: var(--modal-input-height);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.stats-card .table-header .create-btn,
+.primary-btn{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.stats-card .table-header .download-btn{
+    background-color: var(--light-stroke);
+    color: var(--gray-color);
+}
+.int-table__cell .view-asset{
+    margin-right: 80px;
+}
+
+.int-table__cell .view-asset a{
+    color: var(--primary-color) !important;
+}
+
+.int-table__cell .table-actions{
+    gap: 10px;
+}
+
+.int-table__cell .table-actions button{
+    background-color: unset;
+    border: none;
+    outline: none;
+    height: 20px;
+    padding: 0px;
+}
+
+.no-data-div{
+    min-height:100px;
+}
+
+.no-data-div p{
+    margin-top : 3%;
+    margin-left : 2%;
+}
+/* TO ALIGN TEXT RIGHT IN TABLE */
+.nested-table .int-table__header .int-table__cell:last-child,
+.sub-user-table .int-table__header .int-table__cell:last-child,
+.trunk-table-list .int-table__header .int-table__cell:last-child,
+#voice-dids .int-table__header .int-table__cell:last-child,
+.dlc-brand-listing .int-table__header .int-table__cell:last-child,
+.dlc-campaign-listing .int-table__header .int-table__cell:last-child,
+#detail-table .int-table__header .int-table__cell:last-child,
+#summary-table .int-table__header .int-table__cell:last-child,
+#ifax-groups .int-table__header .int-table__cell:last-child,
+.refine-summaryDiv  .int-table__cell:last-child{
+    text-align: right;
+}
+/* TO ALIGN CENTER */
+.nested-table .expandable-row .int-table__cell:last-child,
+.refine-summaryDiv  .int-table__cell:nth-child(2){
+    text-align: center !important;
+}
+/* TO ALIGN CENTER */
+.additional-service-table .int-table__header .int-table__cell:last-child,
+.block-caller-table .int-table__header .int-table__cell:last-child{
+    width: 130px;
+    text-align: center !important;
+}
+/* TO ALIGN TEXT CENTER IN DATA TABLE */
+#international .int-table__header .int-table__cell:last-child,
+#ifax-reserved .int-table__header .int-table__cell:last-child,
+#ifax .int-table__header .int-table__cell:last-child,
+.lnp-listing .int-table__header .int-table__cell:last-child{
+    text-align: center !important;
+}
+/* TO ALIGN TABLE ACTION BUTTON CENTER INCASE OF 1 BUTTON */
+#international .int-table__cell:last-child .table-actions,
+#ifax-reserved .int-table__cell:last-child .table-actions,
+#ifax .int-table__cell:last-child .table-actions,
+.lnp-listing .int-table__cell:last-child .table-actions{
+    justify-content: center !important;
+}
+/* TO ALIGN TABLE ACTION BUTTON CENTER */
+.additional-service-table .int-table__cell:last-child .table-actions,
+.e911-listing .int-table__cell:last-child .table-actions{
+    justify-content: center !important;
+} 
+/* TO ALIGN TABLE ACTION BUTTON RIGHT */
+.int-table__cell:last-child .table-actions{
+    justify-content: end !important;
+}
+/* HIDE HEADER CSS :: STARTS */
+#ifax-dids-dids .table-header,
+#ifax-groups-section .table-header,
+#ifax-users-section .table-header,
+#ifax-permissions-section .table-header{
+    display: none;
+}
+/* HIDE HEADER CSS :: ENDS */
+.ticket-table .int-table__cell:nth-child(2){
+    min-width: 250px;
+}
+
+.ticket-table .status_id{
+    text-align: left !important;
+}
+
+.sms-setting-listing .sms_url{
+    min-width: 350px;
+    max-width: 350px;
+    word-break: break-word;
+}
+
+.add-tf-campaign-list .int-table__header .int-table__cell:last-child,
+#ifax-pagination .int-table__header .int-table__cell:last-child{
+    text-align: right !important;
+}
+
+#summary-table .int-table__header .int-table__cell,
+#detail-table .int-table__header .int-table__cell,
+#summary-table .int-table__cell,
+#detail-table .int-table__cell{
+    padding-left: 80px !important;
+    width: 30%;
+    padding-right: 80px !important;
+}
+
+
+.sms-setting-listing .int-table__header .int-table__cell:last-child,
+.server-listing .int-table__header .int-table__cell:last-child{
+    text-align: right;
+}
+
+.server-listing .int-table__cell:nth-child(6){
+    white-space: nowrap;
+}
+
+#block_list .status{
+    min-width: 300px;
+    text-align: center;
+}
+
+#validateResult .int-table__cell{
+    width: 33%;
+}
+
+#validateResult .int-table__cell:first-child{
+    text-align: left !important;
+}
+
+#validateResult .int-table__cell:last-child{
+    text-align: right;
+}
+/* TABLE CSS :: ENDS */
+
+/* EXPANDABLE ROWS CSS :: STARTS */
+.expandable-row{
+    display: none;
+    padding: 10px 0px;
+}
+
+.expandable-row::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--table-border);
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+ }
+
+ .expandable-row thead{
+    height: 42px;
+    background-color: var(--expanded-row-bg);
+    padding: 25px 0px;
+ }
+ 
+.expandable-row .int-table__cell{
+    text-align: center;
+    font-size: 14px;
+    color: var(--gray-color);
+    padding: 11px 34px 11px 34px !important;
+}
+/* EXPANDABLE ROWS CSS :: STARTS */
+
+/* NEW PAGINATION CSS :: STARTS */
+.results,
+.pagination{
+    color: var(--light-gray);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 1px;
+}
+
+.pagination .page_number .pagination__jumper{
+    color: var(--light-gray);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+.results .dark-text{
+    color: var(--gray-color);
+    margin-left: 6px;
+}
+
+.pagination{
+    overflow: hidden;
+    margin-left: 10px;
+    padding-bottom: 20px;
+}
+
+.pagination ul{
+    gap: 20px;
+}
+
+.pagination input{
+    width: 28px !important; 
+    height: 28px !important;
+    border-radius: 100%;
+    background-color: var(--primary-color) !important;
+    color: var(--white-color);
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    border: none !important;
+    outline: none;
+    text-align: center;
+    padding: 0px !important;
+}
+
+.status_id{
+    text-align: right !important;
+}
+
+.pagination,
+.pagination__list{
+    gap: 1px;
+}
+
+.pagination{
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.pagination__jumper {
+    line-height: 1;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0em;
+    border: none !important;
+    outline: none;
+    text-align: center;
+    padding: 0px !important;
+    cursor: pointer;
+}
+
+.pagination__jumper .d-flex{
+    padding-top: 3px;
+}
+
+.pagination__item svg{
+    width: 11px;
+    height: 11px;
+}
+
+.active-page .pagination__jumper{
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+} 
+
+.active-page{
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0em;
+    border: none !important;
+    outline: none;
+    text-align: center;
+    padding: 0px !important;
+}
+/* NEW PAGINATION CSS :: ENDS */
+
+/* DASHBOARD CSS :: STARTS */
+.table-row{
+    gap: 30px;
+}
+
+.dashboard-wrapper .table-row{
+    gap:5px;
+}
+
+.dashboard-wrapper .table-row .table-header{
+    height: auto;
+    padding: 7px 20px 5px !important;
+}
+
+.dashboard-wrapper .int-table__row th:first-child, .dashboard-wrapper .int-table__cell:first-child {
+    padding-left: var(--space-md);
+}
+
+.table-row .table-col-6{
+    width:60%
+}
+
+.table-row .table-col-4{
+    width:40%;
+}
+
+.table-row .int-table__inner{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.table-row .table-header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--table-bgcolor);
+    z-index: 9999;
+    border-radius: 10px 10px 0px 0px;
+    height: 80px;
+    padding: 0px 35px;
+}
+
+.short-term-chart{
+    height: 530px;
+}
+
+.dashboard-ticket-table .pagination{
+    display: none !important;
+}
+
+.dashboard-ticket-table .subject{
+    text-decoration : none !important;
+}
+
+.dashboard-ticket-table .status_id{
+    color : var(--gray-color) !important;
+}
+/* DASHBOARD CSS :: ENDS */
+
+/* PROFILE PAGE CSS :: STARTS */
+.profile-section{
+    background-color: var(--table-bgcolor);
+    box-shadow: var(--table-box-shadow);
+    border-radius: 10px;
+    border: 1px solid var(--table-border);
+}
+
+.profile-content{
+    padding: 40px 35px;
+}
+
+.profile-content h3{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    margin-bottom: 40px;
+}
+
+.profile-content .form{
+    background-color: unset !important;
+    border: unset !important;
+    box-shadow: unset !important;
+}
+
+.profile-content form{
+    margin-top: 50px;   
+}
+
+.profile-content .hide-show-password{
+    right: 25px;
+}
+
+.profile-content .upload-files-container{
+    gap: 50px;
+}
+
+.profile-content .user-img{
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+}
+
+.profile-content .user-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-content .drag-file-area {
+	border: 2px dashed var(--textbox-border);
+	border-radius: 10px;
+	padding: 25px 50px;
+	width: 350px;
+    height: 160px;
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    pointer-events: none;
+}
+
+.profile-content .drag-file-area label .browse-files-text {
+	color: var(--primary-color);
+	font-weight: 600;
+	cursor: pointer !important;
+    pointer-events: all !important;
+    text-decoration: underline;
+}
+
+.profile-content .browse-files span {
+	position: relative;
+}
+
+.profile-content .default-file-input {
+	opacity: 0;
+}
+
+.profile-info-p{
+    color: var(--gray-color) !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 21px !important;
+    letter-spacing: 0em !important;
+    margin-bottom: 10px !important;
+}
+/* PROFILE PAGE CSS :: ENDS */
+
+/* BLOCK CALLER CSS :: STARTS */
+#block_caller .form{
+    gap: 30px;
+}
+
+.block-caller-table{
+    padding: 20px;
+}
+
+.block-caller-table .data-table{
+    border-color: var(--textbox-border);
+    box-shadow: none !important;
+}
+
+#block_caller label{
+    font-weight: 600;
+}
+
+.checkbox-group-area label{
+    font-weight: 400 !important;
+}
+
+.available-trunks{
+    background: #F9FBFC;    
+    border:1px solid var(--light-stroke);
+    padding:20px;
+    border-radius: 5px;
+}
+
+.available-trunks-header p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;    
+    color: var(--gray-color);
+}
+
+.available-trunks-header p span{
+    color: var(--dark-gray-color);
+    font-weight: 300;
+}
+
+.trunk-list a{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    color: var(--primary-color) !important;
+    background-color: unset !important;
+}
+
+.trunck-list-checkbox-list{
+    flex-wrap: wrap;
+    max-height:200px;
+    overflow-y: scroll;
+}
+
+.trunck-list-checkbox-item{
+    min-width: 190px;
+    max-width: 190px;
+}
+
+.h-300{
+    height: 350px;
+}
+
+.h-300 .btn-group{
+    bottom: 0px;
+}
+/* BLOCK CALLER CSS :: ENDS */
+
+/* SERVER CSS :: STARTS */
+.server-option-group{
+    padding: 30px 35px;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.server-option{
+    min-width: 272px;
+    max-width: fit-content;
+    border-radius: 5px;
+}
+
+.option-header{
+    padding: 20px;
+    background: var(--light-stroke);
+    border-radius: 5px 5px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+}
+
+.server-option ul{
+    border: 1px solid var(--textbox-border);
+    border-top: unset;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.server-option ul li{
+    padding: 10px 20px;
+}
+
+.server-option ul li:not(:last-child){
+    border-bottom: 1px solid var(--table-border);
+}
+
+.server-option ul li p{
+    color: var(--gray-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.round-checkbox{
+    top: -13px;
+    left: 10px;
+}
+
+
+.round-checkbox .custom-checkbox, 
+.round-checkbox .custom-checkbox .checkmark{
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 50%;
+    margin-bottom: 0px !important;
+}
+
+.round-checkbox .custom-checkbox .checkmark {
+    background-color: var(--textbox-border);
+}
+
+.round-checkbox .custom-checkbox .checkmark:after {
+    width: 5px;
+    height: 10px;
+    top: 4px !important;
+}
+
+.server-option.selected-server {
+    border: 2px solid var(--primary-color);
+}
+/* SERVER CSS :: ENDS */
+
+/* SUPPORT CSS :: STARTS */
+.ticket-structure{
+    gap: 40px;
+    border-bottom: 1px solid var(--textbox-border);
+    padding-bottom: 30px;
+}
+
+.created-ticket-list{
+    padding: 30px 35px;
+}
+
+.created-ticket{
+    margin-bottom: 35px;
+}
+
+.created-ticket p a{
+    background-color: unset !important;
+    color: var(--primary-color);
+}
+
+.ticket-header{
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    margin-bottom: 15px;
+    min-width: fit-content;
+}
+
+.ticket-header figure{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ticket-header figure img{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.ticket-description{
+    padding: 0px 20px;
+    border-radius: 5px;
+    /* background-color: var(--table-bgcolor);
+    border: 1px solid var(--textbox-border); */
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    width: 100%;
+}
+
+.ticket-description img{
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    color: var(--primary-color);
+}
+
+.ticket-date{
+    color: var(--gray-color);
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    right: 0px;
+    bottom: -25px;
+}
+
+.new-ticket .form label{
+    font-weight: 600;
+}
+
+#tinymce p{
+    color: var(--gray-color) !important;
+}
+/* SUPPORT CSS :: ENDS */
+
+/* DOCUMENT CSS :: STARTS */
+.document-section {
+    background-color: var(--table-bgcolor);
+    border: 1px solid var(--table-border);
+    box-shadow: var(--table-box-shadow);
+    border-radius: 10px;
+}
+
+.document-section .card-header{
+    padding: 30px 35px 30px 35px;
+    border-bottom: 1px solid var(--table-border);
+} 
+
+.document-section .content-padding{
+    padding: 30px 35px;
+}
+
+.document-section .border-soft{
+    border: 1px solid var(--textbox-border);
+    background-color: var(--table-bgcolor);
+    border-radius: 5px;
+}
+
+.document-section .border-soft ul,
+.document-section .ul{
+    padding: 35px;
+    min-height: 280px;
+}
+
+.document-section .border-soft ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.document-section .border-soft ul li,
+.document-section .ul p,
+.document-section ol li,
+.document-section ul li{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    position: relative;
+    /* display: flex; */
+    align-items: start;
+    padding-left: 30px;
+}
+
+#answer-card.document-section ol li,
+#answer-card.document-section ul li,
+#answer-card.document-section p{
+    padding-left: 0px;
+}
+
+.document-section ol li a,
+.document-section ul li a{
+    color: var(--primary-color);
+}
+
+.document-section .row{
+    gap: 40px;
+}
+
+.document-section .border-soft ul li::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--light-gray);
+    left: 0;
+    top: 5px;
+}
+
+.document-section .groupheader{
+    background-color: var(--light-stroke);
+    padding: 15px 40px;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 34px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    border-radius: 5px 5px 0px 0px;
+}
+
+[data-theme="dark"] .document-section {
+    border: unset;
+}
+
+[data-theme="dark"] .document-section .groupheader {
+    background-color: var(--table-border);
+}
+/* DOCUMENT CSS :: ENDS */
+
+/* CHANGE LOG CSS :: STARTS */
+.timeline {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 35px;
+    position: relative;
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+.timeline:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 16%;
+    bottom: 20px;
+    border-right:2px dashed var(--textbox-border);
+}
+
+.timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry {
+    clear: both;
+    text-align: left;
+    position: relative;
+}
+
+.entry .title {
+    margin-bottom: 0.5em;
+    float: left;
+    width: 15%;
+    padding-right: 40px;
+    text-align: left;
+    position: relative;
+}
+
+.entry .title h3 {
+    color:var(--black-color);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: 0em;
+}
+
+[data-theme="dark"] .entry .title h3{
+    color: var(--dark-gray-color);
+}
+
+.entry .title p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color:var(--light-gray)
+}
+
+.entry .title:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 4px solid #05bfff4a;
+    background-color: #fff;
+    border-radius: 100%;
+    right: 0px;
+    z-index: 99;
+    box-shadow: inset 0px 0px 1px 3px var(--primary-color);
+}
+
+.entry .body {
+    margin: 0 0 60px;
+    float: right;
+    width: 85%;
+    padding-left: 30px;
+}
+
+.entry .body ul li p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color:var(--gray-color);
+}
+
+.entry .body ul li div{
+    min-width:100px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    min-width:80px;
+}
+
+.starting-dot div::before {
+    content: '';
+    width: 8px !important;
+    height: 8px !important;
+    top: -35px;
+    background-color: var(--primary-color) !important;
+    box-shadow: unset !important;
+    border: unset !important;
+    right: 5px !important;
+}
+
+.ending-dot div::before{
+    bottom:-20px !important;
+    top:unset !important;
+}
+
+.added-text{
+    color:var(--primary-color);
+}
+
+.fixed-text{
+    color:var(--green-color);
+}
+/* CHANGE LOG CSS :: ENDS */
+
+/* COMPLIANCE CSS :: STARTS */
+.compliance-step{
+    padding: 30px 35px;
+}
+
+.compliance-step p{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.compliance-step .blue-text,
+.compliance-step .blue-text a{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: var(--primary-color) !important;
+    gap: 5px;
+    background-color: unset !important;
+}
+
+.compliance-step .remove-file,
+.compliance-step .remove-file a{
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    background-color: unset !important;
+}
+
+.compliance-step .info{
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.compliance-step .more-question{
+    color: var(--dark-gray-color);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0em;
+}
+
+.compliance-step .more-question a{
+    color: var(--primary-color) !important;
+    text-decoration: none;
+    background-color: unset !important;
+}
+
+.compliance-step .light-text .blue-text, 
+.compliance-step .light-text .blue-text a, 
+.compliance-step .light-text p{
+    font-weight: 400;
+}
+
+.compliance-step form h3{
+    color: var(--dark-gray-color);
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0em;
+    margin-bottom: 25px;
+}
+
+.inner-tab{
+    width: fit-content;
+}
+
+.inner-tab .tabs-nav-v2{
+    border-bottom: unset !important;
+}
+
+.inner-tab .tabs-nav-v2 li:last-child a{
+    border-radius: 0px 10px 10px 0px;
+}
+/* COMPLIANCE CSS :: ENDS */
+
+/* BALANCE :: ACCOUNT MANAGEMENT CSS :: STARTS */
+.balance-section .accordion__item{
+    background-color: var(--table-bgcolor);
+    border: 1px solid var(--table-border);
+    box-shadow: var(--table-box-shadow);
+    border-radius: 10px;
+}
+
+.balance-section .accordion__header{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    background-color: unset;
+    padding: 25px 35px;
+}
+
+.balance-section .accordion__panel{
+    padding: 25px 35px;
+    border-top: 1px solid var(--table-border);
+}
+
+.dollar-container{
+    left: 17px;
+    top: 17px;
+    color: var(--dark-gray-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+.balance-section .input-wrapper .width-50{
+    max-width: 400px;
+}
+
+.balance-section .balance-notification-subscribe{
+    gap: 20px;
+}
+
+.balance-section .current-balance p{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+
+.balance-section .current-balance p span{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em;
+    color: var(--green-color);
+}
+
+.balance-section .minimum-amount-info p{
+    color: var(--dark-gray-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    padding-top: 30px;
+}
+/* BALANCE :: ACCOUNT MANAGEMENT CSS :: ENDS */
+
+/* BILLING PROFILE :: BALANCE ::  :: STARTS */
+.billing-option-section{
+    padding: 30px 35px;
+}
+
+.billing-option-section .tabs-nav-v2__item[aria-selected=true],
+.billing-option-section .tabs-nav-v2__item{
+    background-color: unset !important;
+    border-radius: unset !important;
+    box-shadow: unset !important;
+    padding: 0px;
+}
+
+.billing-option-section .tabs-nav-v2__item[aria-selected=true]::before,
+.billing-option-section .tabs-nav-v2__item[aria-selected=true]::after{
+    content: unset;
+}
+
+.billing-option-section .radio-group [type="radio"]:checked + label:before, 
+.billing-option-section .radio-group [type="radio"]:not(:checked) + label:before {
+    top: -3px;
+}
+
+.tabs-v2 .tabs-nav-v2 li a label{
+    margin-bottom: -3px !important;
+}
+
+.indicator{
+    display: flex;
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--textbox-border);
+    border-radius: 100%;
+    background: var(--textbox-border);
+}
+
+.billing-option-section .tabs-nav-v2__item[aria-selected=true] .indicator{
+    background-color: var(--primary-color);
+}
+
+[data-theme="dark"] .billing-option-section .tabs-nav-v2__item{
+    background-color: transparent !important;
+}
+/* BILLING PROFILE :: ACCOUNT MANAGEMENT CSS :: ENDS */
+
+/* MESSAGING BRAND NOTE CSS :: STARTS */
+.note-msg-container{
+    max-height: 200px;
+    overflow-y: scroll;
+    gap:5px;
+    padding-bottom: 0px !important;
+}
+
+.note-msg-container p{
+    color: var(--gray-color);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+}
+
+.balance-notification-subscribe p{
+    color: var(--dark-gray-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+
+.balance-notification-subscribe span{
+    color: var(--light-gray);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+
+.balance-notification-subscribe button{
+    height: var(--modal-input-height) !important;
+}
+
+.add-tf-campaign #step3 textarea{
+    height: var(--modal-input-height) !important;
+    padding-top: 15px !important;
+}
+/* MESSAAGING BRAND NOTE CSS :: STARTS */
+
+/* TELEPHONE NUMBER CSS :: STARTS */
+.info-para {
+    background-color: #f6f7f8;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FF291C;
+    max-width: 500px;
+    top: 30px;
+    right: 35px;
+}
+
+.order-telephone .tabs-nav-v2__item#tab-tollfree-telephone{
+    border-radius: 0px 9px 9px 0px;
+    border: 1px solid var(--textbox-border);
+    border-left: unset;
+}
+
+.order-telephone .tabs-nav-v2__item#tab-local-telephone{
+    border-radius: 9px 0px 0px 9px;
+    border: 1px solid var(--textbox-border);
+    border-right: unset;
+}
+
+.order-telephone .tabs-nav-v2__item[aria-selected=true]{
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: 0px 0px 4px 3px #0000000D !important;
+}
+
+.local-serach-option .radio-btn-group {
+    gap: 35px;
+}
+
+.form-text .blue-text{
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+
+#fieldOfDids{
+    gap: 30px 10px;
+    flex-wrap: wrap;
+}
+
+#fieldOfDids button{
+    background-color: transparent;
+    border: 1px solid var(--table-border);
+    color: var(--gray-color);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    height: 70px;
+    width: 200px;
+}
+
+#fieldOfDids .checkbox-area{
+    width: fit-content !important;
+}
+
+#fieldOfDids .custom-checkbox{
+    margin-right: -25px;
+}
+
+#fieldOfDids .border-primary{
+    border-color: var(--primary-color) !important;
+}
+
+.search-heading a{
+    color: var(--primary-color);
+    text-decoration: underline;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+
+.search-heading p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.search-heading h3{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+}
+
+.field-sets .table-header{
+    padding-top: 0px !important;
+}
+
+/* TELEPHONE NUMBER CSS :: ENDS */
+
+/* VIEW LNP REQUEST CSS :: STARTS */
+.view-lnp-request-section table tr td{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+}
+
+.view-lnp-request-section .content-padding{
+    padding: 30px 35px;
+}
+
+.view-lnp-request-section table tr td a{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0em;
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.view-lnp-request-section table tr td:first-child{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 51px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    min-width: 300px;
+    max-width: 350px;
+    padding: 8px 10px;
+}
+
+.view-lnp-request-section .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+  
+.view-lnp-request-section  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.note-section{
+    border: 1px solid var(--textbox-border);
+    border-radius: 5px;
+    padding: 30px 25px;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.date-of-note{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color)
+}
+
+.notes-for-lnp{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    border-bottom: 1px solid var(--table-border);
+}
+/* VIEW LNP REQUEST CSS :: ENDS */
+
+/* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: STARTS */
+.rates-and-fees-section{
+    padding: 30px 35px !important;
+}
+
+.rates-and-fees-section .tabs-nav-v2__item[aria-selected=true]{
+    border: unset !important;
+    border-radius: unset !important;
+    box-shadow: 0px 0px 4px 3px #0000000D !important;
+}
+
+.rates-and-fees-section .tabs-nav-v2{
+    border: 1px solid var(--textbox-border);
+    border-radius: 10px;
+    background-color: var(--light-stroke);
+}
+
+.rates-and-fees-section .tabs-nav-v2__item {
+    padding: 0px 10px;
+}
+
+.rates-and-fees-section .tabs-nav-v2 li a {
+    border-radius: 10px !important;
+}
+
+#billingInfo .tbl__body tr td:first-child,
+#servers .tbl__body td:first-child,
+#zone2 .tbl__body td:first-child,
+#nonUsStatesInboundTF .tbl__body td:first-child,
+#ifax .tbl__body tr td:first-child{
+    width: 200px;
+}
+
+#shortMessages .tbl__body td:first-child{
+    width: 250px;
+}
+
+.DlcMessages .tbl__body td:first-child,
+#domesticUsaZone1Dids .tbl__body tr td:first-child,
+#internationalCalls .tbl__body tr td:first-child{
+    width: 300px;
+}
+
+.rates-and-fees-section .tbl__body .int-table__cell--th{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    padding-left: 0px !important;
+}
+
+.rates-and-fees-section .tbl__body .int-table__cell{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    padding: 10px 35px 15px 30px;
+}
+
+.rates-and-fees-section .tbl{
+    padding: 0px 10px;
+}
+
+#cost-table .int-table__inner{
+    border: 1px solid var(--textbox-border);
+    border-radius: 5px;
+    max-height:500px; 
+    overflow:auto;
+}
+
+.info-tooltip {
+    left: 5px !important;
+    display: inline;
+    margin-bottom: -3px;
+    position: relative;
+    top: 4px;
+}
+/* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: ENDS */
+
+/* ACCOUNT MANAGEMENT :: SUB USERS :: STARTS */
+.login-info-heading{
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+    margin-bottom: 40px;
+}
+/* ACCOUNT MANAGEMENT :: SUB USERS CSS :: ENDS */
+
+/* REPORTS :: BILLING REPORT CSS :: STARTS */
+.summary-table .data-table{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-table .int-table__cell{
+    color: var(--gray-color) !important;
+    font-size: 16px !important;
+    padding: 25px 80px !important;
+    text-transform: capitalize;
+}
+
+.int-table__cell-color td{
+    color: var(--primary-color) !important;
+}
+
+.gap-20{
+    gap: 20px;
+}
+
+/* .scrollDiv{
+    overflow-y: scroll;
+} */
+
+.refine-summaryDiv{
+    height: 450px;
+    overflow-y: visible !important;
+}
+
+/* .refine-summaryDiv .int-table__cell{
+    padding: 25px 15px !important;
+} */
+
+.header-as-cell{
+    padding: 0px 48px !important;
+    color: var(--dark-gray-color) !important;
+    font-weight: 600;
+}
+
+.summary-table .int-table__cell:nth-child(2){
+    text-align: center;
+}
+
+.summary-table .card-header{
+    color: var(--dark-gray-color) !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
+
+.summary-table .data-table tr td{
+    width: 33.33%;
+}
+
+.summary-table .data-table tr td:last-child,
+.tbl__row td:last-child{
+    text-align: right;
+}
+
+.summary-table .int-table__header .int-table__cell:last-child{
+    text-align: center;
+}
+
+.input-group{
+    gap: 20px;
+    max-width: 70%;
+}
+
+.input-group .date-input {
+    width: 250px;
+}
+
+#billing-report-switch .switch__label{
+    background-color: var(--light-stroke) !important;
+}
+
+#billing-report-switch .switch__input:checked+.switch__label {
+    background-color: var(--primary-color) !important;
+}
+
+#billing-report-switch .switch__marker{
+    left: 5px !important;
+    background-color: var(--light-gray);
+}
+
+#billing-report-switch .switch__input:checked+.switch__label+.switch__marker {
+    left: 32px !important;
+    background-color: var(--white-color);
+}
+
+.payment-stats-chart,
+.telephone-number-chart{
+    height: 470px;
+}
+
+.small-datepicker{
+    width: calc(50% - 10%);
+}
+
+.date-picker__month-nav li, 
+.date-picker__week li, 
+.date-picker__dates li{
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 1px;
+}
+
+.date-picker__week, 
+.date-picker__dates{
+    justify-content: start;
+    margin-left: 3%;
+    width: calc(var(--date-picker-calendar-item-size) * 7);
+}
+
+.non-selectable-dates li:nth-child(1),
+.non-selectable-dates li:nth-child(7),
+.non-selectable-dates li:nth-child(8),
+.non-selectable-dates li:nth-child(14),
+.non-selectable-dates li:nth-child(15),
+.non-selectable-dates li:nth-child(21),
+.non-selectable-dates li:nth-child(22),
+.non-selectable-dates li:nth-child(28),
+.non-selectable-dates li:nth-child(29),
+.non-selectable-dates li:nth-child(35),
+.non-selectable-dates li:nth-child(36),
+.non-selectable-dates li:nth-child(42),
+.date-picker__date--disabled{
+    pointer-events: none !important;
+    background-color: var(--textbox-border) !important;
+    border-radius: 5px !important;
+}
+/* REPORTS :: BILLING REPORT CSS :: ENDS */
+
+/* SIP TRUNK CSS :: STARTS */
+.optional-lable{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+
+.preference-info {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    color: var(--dark-gray-color);
+}
+
+.international-info.margin-top-lg {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+}
+/* SIP TRUNK CSS :: ENDS */
+
+/* OREDER SERVER CSS :: STARTS */
+.server-info{
+    border: 1px solid var(--textbox-border);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.server-info a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+/* OREDER SERVER CSS :: ENDS */
+
+/* DASHBAORD CSS :: STARTS */
+.table-row .table-header a{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;    
+    color: var(--dark-gray-color);
+    text-decoration: none;
+    background-color: transparent !important;
+}
+
+.table-row .primary::before {
+    background-color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    border-radius: 50%;
+}
+
+.table-row .pagination{
+    padding-bottom: 0px !important;
+}
+
+.table-row .int-table__cell a{
+    color: var(--gray-color);
+    text-decoration: none;
+}
+
+.chart-header{
+    padding: 20px 35px 25px 35px;
+    border-bottom: 1px solid var(--table-border);
+    background-color: var(--table-bgcolor);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.dashboard-wrapper .chart-header{
+    padding: 10px 10px 0px 10px;
+}
+
+.chart-header a{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0em;    
+    color: var(--dark-gray-color);
+    text-decoration: none;
+}
+
+.chart-header.padding-set{
+    padding-top:35px !important;
+}
+
+.chart-row .primary::before {
+    background-color: var(--light-gray);
+    border: 1px solid var(--light-gray);
+    border-radius: 50%;
+}
+
+/* .chart-row{
+    gap: 5px;
+} */
+
+.chart-heading p{
+    color: var(--gray-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+}
+
+.health-bar {
+    border-radius: 100px;
+    background: var(--table-border)  
+}
+
+.health-bar-section{
+    padding: 29px 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px 20px;
+}
+
+.health-bar-section .bar-container{
+    width: 48%;
+}
+
+.health-bar-value {
+    height: 20px;
+    border-radius: 100px;
+    transition: 0.4s linear;  
+    transition-property: width;    
+    animation: progressAnimation 2s;
+}
+
+@keyframes progressAnimation {
+    0%   { width: 1%;}
+}
+
+.succ_dark.color-success-darker {
+    color: var(--primary-color) !important;
+  }
+
+.dark-bar{
+    background: linear-gradient(270deg, #0271D0 -5.74%, #068AF0 109.29%);
+}
+
+.light-bar{
+    background: linear-gradient(90.86deg, #00BEF2 21.77%, #05BFFF 144.57%);
+}
+
+.info-icon{
+    right: 10px;
+    top: 10px;
+    z-index: 99;
+}
+
+.account-health-section{
+    height: 310px;
+}
+
+.account-health-percentage{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0em;
+}
+
+.info::before {
+    --b: url(/public/img-new/info-icon.svg);
+    border-radius: 100%;
+    border: 1px solid var(--dark-gray-color);
+}
+
+.gauge-container {
+    position: relative;
+    box-shadow: 0px -10px 15px #05bfff26;
+    background: conic-gradient(from 130.35deg at 50% 50%, #068af000 96deg, #05bfff78 222.75deg, #068af005 360deg);
+    border-radius: 50%;
+    position: relative;
+    width: 100px;
+    z-index: 1;
+    margin-top:20px
+}
+
+.gauge {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gauge-container .needle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%, -100%) rotate(2deg);
+    transition: transform 1s ease; 
+    width: 5px;
+    height: 75px;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: -1;
+    box-shadow: 0px 0px 16.182863235473633px 0px #fc983429;
+    border-width: 0 3px 45px 3px;
+    border-color: transparent transparent #0578D8 transparent;
+}
+
+.gauge-container .dot{
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF),radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.3) 57.81%, rgba(10, 4, 34, 0.3) 100%);
+    border: 3px solid white;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    box-shadow: 0px 20px 35px #b6b698;
+}
+
+.gauge-container .clock {
+    height: 110px;
+    width: 110px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    transform: rotate(16deg);
+}
+
+.gauge-container .clock__indicator {
+    position: absolute;
+    left: calc(50% - 1px);
+    width: 1px;
+    transform-origin: bottom center;
+    z-index: 2;
+    border-radius: 1px;
+    height: 53px;
+    border-top: 5px solid #0578D8;
+    background: none;
+}
+
+.gauge-container section:nth-of-type(1) {
+    transform: rotateZ(calc(6deg * 38));
+}
+
+.gauge-container section:nth-of-type(2) {
+    transform: rotateZ(calc(6deg * 40))
+}
+
+.gauge-container section:nth-of-type(3) {
+    transform: rotateZ(calc(6deg * 41));
+}
+
+.gauge-container section:nth-of-type(4) {
+    transform: rotateZ(calc(6deg * 42));
+}
+
+.gauge-container section:nth-of-type(5) {
+    transform: rotateZ(calc(6deg * 43));
+}
+
+.gauge-container section:nth-of-type(6) {
+    transform: rotateZ(calc(6deg * 44));
+}
+
+.gauge-container section:nth-of-type(7) {
+    transform: rotateZ(calc(6deg * 45));
+}
+
+.gauge-container section:nth-of-type(8) {
+    transform: rotateZ(calc(6deg * 46));
+}
+
+.gauge-container section:nth-of-type(9) {
+    transform: rotateZ(calc(6deg * 47));
+}
+
+.gauge-container section:nth-of-type(10) {
+    transform: rotateZ(calc(6deg * 48));
+}
+
+.gauge-container section:nth-of-type(11) {
+    transform: rotateZ(calc(6deg * 49));
+}
+
+.gauge-container section:nth-of-type(12) {
+    transform: rotateZ(calc(6deg * 50));
+}
+
+.gauge-container section:nth-of-type(13) {
+    transform: rotateZ(calc(6deg * 51.8));
+}
+
+.gauge-container section:nth-of-type(14) {
+    transform: rotateZ(calc(6deg * 52));
+}
+
+.gauge-container section:nth-of-type(15) {
+    transform: rotateZ(calc(6deg * 53));
+}
+
+.gauge-container section:nth-of-type(16) {
+    transform: rotateZ(calc(6deg * 54));
+}
+
+.gauge-container section:nth-of-type(17) {
+    transform: rotateZ(calc(6deg * 55));
+}
+
+.gauge-container section:nth-of-type(18) {
+    transform: rotateZ(calc(6deg * 56));
+}
+
+.gauge-container section:nth-of-type(19) {
+    transform: rotateY(calc(6deg * 4)) rotateZ(calc(6deg * -5)) rotateX(-26deg);
+}
+
+.gauge-container section:nth-of-type(20) {
+    transform: rotateZ(calc(6deg * 58.5));
+}
+
+.gauge-container section:nth-of-type(21) {
+    transform: rotateZ(calc(6deg * 60));
+}
+
+.gauge-container section:nth-of-type(22) {
+    transform: rotateZ(calc(6deg * 61));
+}
+
+.gauge-container section:nth-of-type(23) {
+    transform: rotateZ(calc(6deg * 62));
+}
+
+.gauge-container section:nth-of-type(24) {
+    transform: rotateZ(calc(6deg * 63));
+}
+
+.gauge-container section:nth-of-type(25) {
+    transform: rotateZ(calc(6deg * 64));
+}
+
+.gauge-container section:nth-of-type(26) {
+    transform: rotateZ(calc(6deg * 65));
+}
+
+.gauge-container section:nth-of-type(27) {
+    transform: rotateZ(calc(6deg * 66));
+}
+
+.gauge-container section:nth-of-type(28) {
+    transform: rotateZ(calc(6deg * 67));
+}
+
+.gauge-container section:nth-of-type(29) {
+    transform: rotateZ(calc(6deg * 68)); 
+} 
+
+.gauge-container section:nth-of-type(30) {
+    transform: rotateZ(calc(6deg * 69));
+}
+
+.gauge-container section:nth-of-type(31) {
+    transform: rotateZ(calc(6deg * 69.5 ));
+}
+ .gauge-container section:nth-of-type(32) {
+    transform: rotateZ(calc(6deg * 71));
+}
+
+.gauge-container section:nth-of-type(33) {
+    transform: rotateZ(calc(6deg * 72));
+}
+
+.gauge-container section:nth-of-type(34) {
+    transform: rotateZ(calc(6deg * 73));
+}
+
+.gauge-container section:nth-of-type(35) {
+    transform: rotateZ(calc(6deg * 74));
+} 
+
+.gauge-container section:nth-of-type(36) {
+    transform: rotateZ(calc(6deg * 75));
+}
+
+.gauge-container section:nth-of-type(37) {
+    transform: rotateZ(calc(6deg * 76));
+} 
+
+.gauge-container section:nth-of-type(1),
+.gauge-container section:nth-of-type(7),
+.gauge-container section:nth-of-type(13)     {
+    border-top-width: 10px;
+    width: 2px;
+    left: calc(50% - 7px);  
+}
+
+.gauge-container section:nth-of-type(19) {
+    height: 69px;
+    top: -17px;
+    width: 2px;
+    border-top-width: 10px;
+}
+
+.gauge-container section:nth-of-type(25){
+    height: 56px;
+    top: -5px;
+    width: 2px;
+    border-top-width: 10px;
+}
+
+.gauge-container section:nth-of-type(31),
+.gauge-container section:nth-of-type(37){
+    border-top-width: 10px;
+    width: 2px;
+    left: calc(50% - -4px);
+}
+
+@-webkit-keyframes time {
+    to {
+        transform: rotateZ(360deg);
+    }
+    }
+
+    @keyframes time {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.meter-chart{
+    min-height: 180px;
+}
+
+.meter-chart-container{
+    width: 25%;
+    position: relative;
+    border: none;
+}
+
+.meter-chart-container::before,
+.meter-chart-container::after {
+    position: absolute;
+    content: "";
+    width: 30%;
+    height: 100%;
+}
+
+.meter-chart-container::before {
+  left: 0;
+  top: 0;
+  border-left: 1px solid var(--table-border);
+  border-top: 1px solid var(--table-border);
+}
+
+.meter-chart-container::after {
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid var(--table-border);
+  border-top: 1px solid var(--table-border);
+}
+
+.meter-chart-container:first-child::before{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.meter-chart-container:last-child::after{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+} 
+
+.meter-chart-container h3{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--dark-gray-color);
+    margin-top:5px
+}
+
+.meter-chart-container p,
+.min-max-value{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: var(--gray-color);
+    flex-direction: row !important;
+}
+
+.min-max-value{
+    margin-top: -15px;
+}
+
+.chart--area{
+    padding: 10px 20px;
+}
+
+.id, .create_date, .update_date, .status_id, .category_id{
+    white-space:nowrap !important;
+}
+.int-table__header .int-table__cell{
+    white-space:nowrap !important;
+}
+
+.hlink{
+    color: var(--primary-color) !important;
+}
+
+.stats-card .chart--area{
+    --chart-height: 220px;
+}
+
+.subject{
+    color:var(--primary-color);
+    text-decoration:underline;
+}
+
+.canvasDiv{
+    height:90% !important;
+    width:auto;
+}
+
+canvas{
+    width:100% !important;
+    height:100% !important;
+}
+/* DASHBARD CSS :: ENDS */
+
+/* ANALYTICS DASHBOARD CSS :: STARTS */
+.analytics-dashboard .selection{
+    width: 200px;
+}
+
+.analytics-dashboard .select2-container--default .select2-selection--single{
+    padding-left: 15px !important;
+}
+
+.pagination__list span,
+.enough-para{
+    color: var(--dark-gray-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+}
+/* ANALYTICS DASHBAORD CSS :: ENDS */
+
+/* Notification Css */
+.toaster-list{
+    position: fixed;
+    bottom: 38px;
+    right: 20px;
+    padding: 10px;
+    min-height: fit-content;
+    max-height: 700px;
+    z-index: 99;
+    overflow-y: auto;
+}
+
+.toaster{
+    border-top: 5px solid var(--primary-color);
+    max-width: 600px;
+    padding: 10px 25px;
+    min-height: 50px;
+    min-width: 350px;
+}
+
+.toaster:first-child{
+    margin-top: 0px !important;
+}
+
+.toaster .info-text{
+    color: var(--dark-gray-color);
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    font-size: 14px;
+    font-weight: 300;
+    margin-right: 25px;
+}
+
+.toaster .info-text p:first-child{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.toaster button{
+    background-color: transparent;
+}
+
+/* DARK THEME CSS :: STARTS */
+[data-theme="dark"] .hide-on-dark{
+    display: none;
+}
+
+[data-theme="dark"] .hide-on-light{
+    display: block;
+}
+
+[data-theme="dark"] body{
+    background-color: var(--body-background);
+}
+
+[data-theme="dark"] .app-ui__user-btn p{
+    color: var(--dark-gray-color);
+}
+
+[data-theme="dark"] a.app-ui__logo{
+    content: url(../img-new/logo-full-white.svg);
+}
+
+[data-theme="dark"] .active-link .sidenav__text{
+    color: var(--white-color) !important;
+}
+
+[data-theme="dark"] .sidenav__divider{
+    background-color: var(--table-bgcolor);
+}
+
+[data-theme="dark"] .sidenav__label{
+    color: #EDEDFB;
+}
+
+[data-theme="dark"] .available-trunks{
+    background: var(--table-bgcolor);    
+    border-color:var(--table-border);
+}
+
+[data-theme="dark"] .option-header{
+    background-color: var(--table-border);
+}
+
+[data-theme="dark"] .round-checkbox .custom-checkbox .checkmark {
+    background-color: var(--side-drawer-bg);
+}
+
+[data-theme="dark"] .sidenav__link.active .sidenav__text {
+    color: var(--white-color) !important;
+}
+[data-theme="dark"] .expandable-row thead{
+    background-color: var(--table-border);
+}
+
+[data-theme="dark"] .table-header .download-btn{
+    background-color: var(--dark-theme-button-bg);
+    color: var(--light-gray);
+}
+
+[data-theme="dark"] .results{
+    color: var(--gray-color);
+}
+
+[data-theme="dark"] .results .dark-text{
+    color: #698A99;
+}
+
+[data-theme="dark"] .pagination{
+    color: var(--table-border);
+}
+
+[data-theme="dark"] .pagination input,
+[data-theme="dark"] .active-page{
+    background-color: var(--table-bgcolor) !important;
+    color: var(--gray-color);
+}
+
+[data-theme="dark"] .pagination ul li svg path{
+    fill: var(--table-border);
+}
+
+/* DARK THEME CSS :: ENDS */
+
+.dashboard-wrapper .info::before{
+    font-size: 12px !important;
+    height: 14px;
+    width: 14px;
+}
+
+.dashboard-wrapper .pagination__list span{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.dashboard-wrapper #from-to-date-span, 
+.dashboard-wrapper #from-to-date-range .js-date-range__value{
+    font-size: 12px !important;
+}
+
+.dashboard-wrapper .date-range{
+    height: 30px !important;
+}
+
+.dashboard-wrapper .table-row .int-table__inner{
+    height: 250px;
+}
+
+.dashboard-wrapper .js-date-range .js-date-range__trigger .icon{
+    width: 14px;
+    right: 2px;
+}
+
+.dashboard-wrapper .int-table__cell{
+    padding: 6px 5px;
+}
+
+.dashboard-wrapper .int-table__header .int-table__cell{
+    font-size: 12px !important;
+}
+
+.sidenav__item .arrow-down svg{
+    width: 10px;
+}
+
+.chart-row .col-6{
+    align-self: stretch;
+}
+/* MEDIAQUERY :: STARTS */
+@media only screen and (min-width: 1440px){
+    .short-term-chart {
+        height: 455px;
+    }
+}
+@media only screen and (max-width: 768.25px){
+    .date-picker__month-nav li, .date-picker__week li, .date-picker__dates li {
+        width: 2.2rem;
+        height: 2rem;
+        margin: 1px;
+    }
+
+    .hide-md{
+        display: block !important;
+        height: 25px;
+    }
+
+    .app-ui__nav{
+        top: 40px;
+        z-index: 9 !important;
+    }
+
+    .hide-show-icon{
+        display: none;
+    }
+    .profile-dropdown{
+        position : fixed !important;  
+        right:0 !important;
+        top: 60px !important;
+        left: auto !important;
+    }
+}
+@media only screen and (max-width: 600px){
+
+    .padding-set{
+        padding: 20px !important;
+    }
+
+    /* HEADER CSS :: STARTS */
+    .app-ui__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding: 0px 20px;
+    }
+
+    .app-ui__header .header-options {
+        gap: 20px;
+    }
+
+    .app-ui__header .dropdown{
+        overflow: hidden;
+    }
+
+    /* HEADER CSS :: ENDS */
+
+    /* SIDEBAR CSS :: STARTS */
+
+    .app-ui__nav{
+        top: 58px;
+        width: 100%;
+        z-index: 99 !important;
+        border-top: 1px solid var(--light-stroke);
+    }    
+    
+    .app-ui__logo-wrapper{
+        justify-content: flex-start;
+    }
+
+    .hide-show-icon,
+    .app-ui__user-btn p{
+        display: none;
+    }
+
+    .sidenav {
+        padding: 10px 30px 50px 30px;
+    }
+    /* SIDEBAR CSS :: ENDS */
+
+    /* LOGIN CSS :: STARTS */
+    .login-form{
+        width: 100% !important;
+        padding: 30px 20px !important;
+    }
+
+    .login-form .welcome-text{
+        font-size: 25px;
+    }
+    /* LOGIN CSS :: ENDS */
+
+    /* PROFILE PAGE CSS :: STARTS */
+    .profile-content .upload-files-container{
+        gap: 20px;
+        flex-direction: column;
+    }
+    /* PROFILE PAGE CSS :: ENDS */
+
+    /* SIP TRUNK CSS :: STARTS */
+    .available-trunks-header{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start !important;
+    }
+    /* SIP TRUNCK CSS :: ENDS */
+
+    /* SERVER CSS :: STARTS */
+    .server-option{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .server-option {
+        min-width: 100% !important; 
+        max-width: 100% !important;
+        margin-bottom: 20px;
+    }
+    /* SERVER CSS :: ENDS */
+
+    /* DOCUMENT CSS :: STARTS */
+    .document-section .row{
+        flex-direction: column;
+    }
+
+    .document-section .row .width-50{
+        width: 100% !important;
+    }
+
+    .document-section .border-soft ul{
+        height: fit-content !important;
+    }
+    /* DOCUMENT CSS :: ENDS */
+
+    /* CHANGE LOG CSS :: STARTS */
+    .entry .title{
+        width: 42% !important;
+    }
+
+    .entry .body{
+        width: 58% !important;
+    }
+
+    .timeline:before{
+        left: 40.5% !important;
+    }
+
+    .entry .body ul li{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .entry .title h3 {
+        font-size: 13px !important;
+    }
+
+    .entry .title p {
+        font-size: 11px !important;
+    }
+    /* CHANGE LOG CSS :: ENDS */
+
+    /* COMPALINCE CSS :: STARTS */
+    .compliance-step form h3 {
+        font-size: 22px !important;
+    }
+    /* COMPLIANCE CSS :: ENDS */
+
+    /* ACCOUNT MANAGEMENT CSS :: STARTS */
+    .balance-section .accordion__panel{
+        padding: 30px 20px;
+    }
+
+    .balance-section .balance-notification-subscribe{
+        flex-direction: column;
+        margin-left: 0px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    /* ACCOUNT MANAGEMENT CSS :: ENDS */
+
+    /* TELEPHONE NUMBER CSS :: STARTS */
+    .local-serach-option{
+        flex-direction: column;
+    }
+
+    .local-serach-option .radio-btn-group {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .info-para{
+        position: unset !important;
+        margin-bottom: 30px;
+    }
+
+    #options .input-field{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .search-heading .d-flex:first-child{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    #fieldOfDids{
+        justify-content: center;
+    }
+
+    .search-heading p,
+    .search-heading h3{
+        font-size: 16px;
+    }
+    /* TELEPHONE NUMBER CSS :: ENDS */
+
+    /* REPORTS :: BILLING REPORT CSS :: STARTS */
+    .input-group,
+    .btn-group-bottom,
+    .input-group .date-input{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .input-group .date-input,
+    .select-date{
+        width: 100%;
+    }
+
+    .btn-group-bottom button{
+        width: 100% !important;
+    }
+    /* REPORTS :: BILLING REPORT CSS :: ENDS */
+
+    /* DASHBOARD CSS :: STARTS */
+    .health-bar-section .bar-container {
+        width: 100% !important;
+    }
+
+    .meter-chart,
+    .account-health-section {
+        height: fit-content !important;
+    }
+
+    .meter-chart .d-flex{
+        flex-direction: column;
+    }
+
+    .meter-chart-container,
+    #customAcdDiv{
+        width: 100%;
+    }
+
+    .meter-chart-container::before,
+    .meter-chart-container::after{
+        content: unset;
+    }
+
+    .meter-chart-container{
+        height: 220px !important; 
+    }
+
+    .table-row .search-bar {
+        min-width: 100% !important;
+    }
+
+    .table-row .table-header{
+        height: 60px;
+    }
+
+    .gauge-container{
+        height: 100px;
+    }
+
+    #short-term-chart {
+        height: 330px !important;
+    }
+    /* DASHBAORD CSS :: ENDS */
+
+    /* ANALYTICS DASHBOARD CSS :: STRATS */
+    .analytics-dashboard .chart-header{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px 25px 25px 25px !important;
+    }
+
+    .telephone-number-chart{
+        width: 100% !important;
+    }
+
+    .telephone-number-chart .chart-header{
+        flex-direction: row !important;
+    }
+
+    .lineDiv {
+        padding: 0px 10px 30px 10px !important;
+    }
+
+    #doughnutDiv{
+        width: 100% !important;
+    }
+    /* ANALYTICS DASHBOARD CSS :: ENDS */
+
+    /* API MANAGEMENT CSS :: STARTS */
+    .api-management-table .table-header{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    /* API MANAGEMENT CSS :: ENDS */
+
+    /* PROFILE CSS :: STARTS */
+    .profile-content .drag-file-area{
+        width: 100%;
+    }
+    /* PROFILE CSS :: STARTS */
+
+    /* SIP TRUNK CSS :: STARTS */
+    #blockCallerForm .checkbox-group{
+        flex-direction: column;
+        gap: 30px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .edit-trunk .checkbox-group,
+    .create-trunk .checkbox-group{
+        margin-bottom: 20px;
+    }
+    /* SIP TRUNK CSS :: ENDS */
+
+    /* BILLING PROFILE :: BALANCE ::  :: STARTS */
+    .biiling-option-section{
+        padding: 30px 20px;
+    }
+
+    .billing-report .width-70,
+    .call-history .width-70,
+    .call-summary .width-70{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .billing-report .width-70 .input-field,
+    .call-history .width-70 .input-field,
+    .call-summary .width-70 .input-field {
+        width: 100%;
+    }
+
+    .header-as-cell{
+        padding: 25px 10px !important;
+    }
+
+    .summary-table .int-table__cell{
+        padding: 25px 10px !important;
+    }
+
+    /* .date-picker__week li{
+        width: 1.8rem;
+        height: 1.8rem;
+    } */
+
+    .int-table__row th:first-child, .int-table__row td:first-child {
+        padding-left: 15px !important;
+    }
+
+    .int-table__table{
+        overflow-wrap: unset !important;
+    }
+
+    .call-history .table-header,
+    .call-summary .table-header{
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+
+    .refine-summaryDiv{
+        height: fit-content;
+    }
+    
+
+    .usage-form .table-header{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 0px 20px;
+    }
+
+    .usage-trend-line-chart .pagination ul{
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .pagination__list span, .enough-para{
+        font-size: 12px;
+    }
+
+    .payment-stats-chart, 
+    .telephone-number-chart{
+        height: fit-content !important;
+    }
+
+    .payment-stats-chart .table-header{
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+    }
+
+    .usage-trend-chart-grid{
+        flex-direction: column;
+    }
+
+    /* TABLE CSS :: STARTS */
+    .stats-card .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px 15px 25px 20px;
+    }
+
+    .table-header-button{
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .search-bar{
+        width: 100% !important;
+    }
+
+    .stats-card .table-options{
+        gap: 5px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .stats-card .table-header button{
+        padding: 0px 10px;
+    }
+    /* TABLE CSS :: ENDS */
+
+    /* PAGINATION CSS :: STARTS */
+    .results,    
+    .pagination,
+    .active-page .pagination__jumper{
+        font-size: 11px !important;
+    }
+
+    .pagination{
+        flex-direction: column;
+    }
+    /* PAGINATION CSS :: ENDS */
+
+    /* DASHBOARD CSS :: STARTS */
+    .dashbaord-header{
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 20px;
+    }
+
+    .table-row .table-options{
+        flex-direction: row !important;
+    }
+
+    .dashbaord-header .radio-btn-group{
+        flex-wrap: wrap;
+    }
+
+    .dashbaord-header .radio-group{
+        width: 45%;
+    }
+
+    .table-row,
+    .chart-row{
+        flex-direction: column;
+    }
+
+    .table-col-6,
+    .table-col-4{
+        width: 100% !important;
+    }
+    /* DASHBOARD CSS :: ENDS */
+
+    /* EXPANDABLE ROW CSS :: STARTS */
+    .int-table__cell .view-asset{
+        margin-right: 0px !important;
+    }
+    /* EXPANDABLE ROW CSS :: ENDS */
+    
+    /* TELEPHONE NUMBER CSS :: STARTS */
+    .search-section{
+        flex-direction: column;
+    }
+
+    .search-heading p,
+    .search-heading h3{
+        font-size: 15px !important;
+    }
+
+    #fieldOfDids button{
+        width: 175px !important;
+    }
+
+    #enterprise-ifax .enterprise-tab{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #enterprise-ifax .tabs-nav-v2__item {
+        padding: 0px 12px;
+    }
+    /* TELEPHONE NUMBER CSS :: ENDS */
+
+    #subuser-privileges-container .d-flex:has(.checkbox-group-area){
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px){
+    .app-ui__nav{
+        display:flex;
+        width:var(--app-ui-static-sidebar-width);
+    }
+
+    .app-ui__body{
+        min-height:0;
+        position:fixed;
+        left:var(--app-ui-static-sidebar-width);
+        width:calc(100% - var(--app-ui-static-sidebar-width));
+        overflow:auto;
+        -webkit-overflow-scrolling:touchus;
+    }
+
+    .app-ui__body-no-beast{
+        width:calc(100% - 80px);
+        float: right;
+    }
+
+    .hide-md{
+        display: block;
+    }
+
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    /* HEADER CSS :: STARTS */
+    .app-ui__nav{
+        z-index: 1;
+    }
+    /* HEADER CSS :: ENDS */
+
+    /* DASHBOARD CSS :: STARTS */
+    #short-term-chart {
+        height: 500px !important;
+    }
+    /* DASHBAORD CSS :: ENDS */
+
+    /* SERVER CSS :: STARTS */
+    .trunk-list .row{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .h-300{
+        height: calc(100vh - 30vh);
+    }
+
+    .available-trunks-header{
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start !important;
+    }
+
+    .server-option {
+        min-width: 31% !important;
+        max-width: 31% !important;
+    }
+
+    .server-option-group {
+        gap: 20px !important;
+    }
+    /* SERVER CSS :: ENDS */
+
+    /* DOCUMENT CSS :: STARTS */
+    .document-section .border-soft ul {
+        padding: 30px;
+        min-height: 435px !important;
+    }
+    /* DOCUMENT CSS :: ENDS */
+
+    /* CHANGE LOG CSS :: STARTS */
+    .entry .title{
+        width: 25% !important;
+    }
+
+    .entry .body{
+        width: 75% !important;
+    }
+
+    .timeline:before{
+        left: 26% !important;
+    }
+    /* CHANGE LOG CSS :: ENDS */
+
+    /* TELEPHONE NUMBER CSS :: STARTS */
+    .local-serach-option{
+        flex-direction: column-reverse; 
+        align-items: flex-start !important;
+        gap: 30px;
+    }
+
+    .info-para {
+        max-width: 100%;
+    }
+    /* TELEPHONE NUMBER CSS :: ENDS */
+
+    /* VIEW LNP REQUEST CSS :: STARTS */
+    .request-data{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    /* VIEW LNP REQUEST CSS :: ENDS */
+
+    /* ACCOUNT MANAGEMENT :: BALANCE CSS :: STARTS */
+    .balance-section .input-wrapper{
+        align-items: flex-start;
+    }
+
+    .balance-section .balance-notification-subscribe{
+        margin-left: 0px;
+    }
+    /* ACCOUNT MANGEMENT :: BALANCE CSS :: EDNS */
+
+    /* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: STARTS */
+    .rates-and-fees-section .tabs-nav-v2 {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .rates-and-fees-section .tabs-nav-v2 li a {
+        border-radius: 0px !important;
+    }
+    /* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: ENDS */
+
+    /* REPORTS :: BILLING REPORT CSS :: STARTS */
+    .input-group{
+        flex-direction: column;
+        align-items: flex-start !important;
+        max-width: 100%;
+    }
+
+    .input-group .date-input,
+    .select-date{
+        width: 100%;
+    }
+
+    .usage-trend-chart-grid{
+        flex-direction: column;
+    }
+
+    .usage-trend-line-chart .pagination__list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .offnet-form .row{
+        flex-direction: column;
+    }
+    /* REPORTS :: BILLING REPORT CSS :: ENDS */
+
+    /* MESAASING CSS :: STARTS */
+    .dlc-brand-listing .stats-card .table-header,
+    .add-tf-campaign-list .stats-card .table-header{
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    /* MESSAGING CSS :: ENDS */
+
+    /* DOCUMENTATION CSS :: STARTS */
+    #grid .row{
+        flex-direction: column;
+    }
+    /* DOCUMENTATION CSS :: ENDS */
+
+    /* DASHBOARD CSS :: STARTS */
+    .table-row,
+    .chart-row{
+        flex-direction: column;
+    }
+
+    .table-col-6,
+    .table-col-4{
+        width: 100% !important;
+    }
+    /* DASHBOARD CSS :: ENDS */
+
+    /* TELEPHONE NUMBER CSS :: STARTS */
+    .search-section{
+        flex-direction: column;
+    }
+
+    .search-heading p,
+    .search-heading h3{
+        font-size: 15px !important;
+    }
+
+    #fieldOfDids button{
+        width: 175px !important;
+    }
+    /* TELEPHONE NUMBER CSS :: ENDS */
+
+    
+    .payment-stats-chart, .telephone-number-chart {
+        height: fit-content !important;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    /* TOASTER CSS :: STARTS */
+    .toaster-list{
+        max-height: 500px;
+    }
+    /* TOASTER CSS :: ENDS */
+
+    /* LOGIN CSS :: STARTS */
+    .login-form{
+        width: 450px;
+        padding: 30px 40px;
+    }
+
+    .login-form .logo-container img{
+        height: 55px;
+    }
+
+    .login-form .welcome-text{
+        font-size: 25px;
+    }
+
+    .form input, 
+    .form select, 
+    .form textarea, 
+    .form .input-type-date, 
+    .form .date-range{
+        padding-left: 10px !important;
+    }
+
+    .login-form .label-form{
+        font-size: 14px;
+    }
+
+    .login-form .logo-container{
+        margin-bottom: 30px;
+    }
+
+    .login-form .input-filed{
+        margin-bottom: 15px;
+    }
+
+    .login-form .input-filed:first-child img{
+        width: 15px;
+    }
+
+    .login-form .input-filed:last-child img{
+        height: 15px;
+    }
+
+    .remember-section label, .remember-section a{
+        font-size: 14px;
+    }
+    
+    .login-form button,
+    .login-form .back-to-login{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+
+    .contact-us,
+    .form-footer,
+    .form-footer p a{
+        font-size: 14px;
+        margin-top: 15px;
+    }
+    
+    /* LOGIN CSS :: ENDSs */
+
+    /* LEFT SIDE NAVBAR CSS :: STARTS */
+    a.app-ui__logo{
+        width: 200px;
+    }
+
+    .balance-info-box .accordion__header h4{
+        font-size: 18px;
+    }
+
+    .balance-info-box .accordion__header span{
+        font-size: 12px;
+    }
+
+    .sidenav__list {
+        gap: 5px;
+    }
+
+    .sidenav__text{
+        font-size: 13px !important;
+    }
+
+    .sidenav__link svg{
+        width: 15px;
+        height: auto;
+    }
+
+    .sidenav__label{
+        font-size: 12px;
+    }
+    /* LEFT SIDE NAVBAR CSS :: ENDS */
+
+    /* CUSTOM CSS :: STARTS */
+    .section-heading {
+        font-size: 22px !important;
+    }
+    /* CUSTOM CSS :: ENDS */
+
+    /* PROFILE PAGE CSS :: STARTS */
+    .profile-content {
+        padding: 30px;
+    }
+
+    .profile-content h3{
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .profile-content .user-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-content .drag-file-area {
+        padding: 25px 50px;
+        height: 130px;
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .profile-content .default-file-input {
+        opacity: 0;
+        top: 10px;
+        position: absolute;
+    }
+
+    /* PROFILE PAGE CSS :: ENDS */
+
+    /* SIP TRUNK CSS :: STARTS */
+    .trunck-list-checkbox-item {
+        min-width: 30%;
+        margin-right: 0px !important;
+    }
+    /* SIP TRUNK CSS :: ENDS */
+
+    /* SERVER CSS :: STARTS */
+    
+    .server-option ul li p{
+        font-size: 12px;
+    }
+    
+    .server-option {
+        min-width: 182px;
+        max-width: 182px;
+    }
+    
+    .server-option-group{
+        gap: 10px;
+    }
+    
+    .app-ui__body-no-beast .server-option {
+        min-width: 19%;
+        max-width: 19%;
+    }
+    
+    .app-ui__body-no-beast .option-header{
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    .app-ui__body-no-beast .server-option-group{
+        gap: 14px;
+    }
+
+    .option-header{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .round-checkbox {
+        top: -10px;
+        left: 15px;
+    }
+
+    .round-checkbox .custom-checkbox, .round-checkbox .custom-checkbox .checkmark {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    /* SERVER CSS :: ENDS */
+
+    /* SUPPORT CSS :: STARTS */
+    .ticket-header{
+        font-size: 14px;
+    }
+    /* SUPPORT CSS :: ENDS */
+
+    /* DOCUMENTATION CSS :: STARTS */
+    .document-section .card-header{
+        font-size: 16px;
+    }
+
+    .document-section .groupheader {
+        padding: 10px 30px;
+        font-size: 18px;
+    }
+
+    .document-section .border-soft ul{
+        padding: 30px;
+        min-height: 325px;
+    }
+
+    .document-section .border-soft ul li,
+    .document-section .ul p,
+    .document-section ol li,
+    .document-section ul li{
+        font-size: 14px;
+    }
+    /* DOCUMENTATION CSS :: ENDS */
+
+    /* CHANGE LOG CSS :: STARTS */
+    .entry .title{
+        width: 20%;
+    }
+
+    .entry .body{
+        width: 80%;
+    }
+
+    .timeline:before{
+        left: 21%;
+    }
+
+    .entry .title h3{
+        font-size: 16px;
+    }
+
+    .entry .title p{
+        font-size: 13px;
+    }
+
+    .entry .body ul li div{
+        font-size: 12px;
+    }
+
+    .entry .body ul li p{
+        font-size: 14px;
+    }
+    /* CHANGE LOG CSS :: ENDS */
+
+    /* COMPLIANCE CSS :: STARTS */
+    .compliance-step{
+        padding: 30px 20px;
+    }
+
+    .compliance-step .blue-text, .compliance-step .blue-text a,
+    .compliance-step p,
+    .compliance-step .info,
+    .compliance-step .more-question{
+        font-size: 15px;
+    }
+
+    .compliance-step .remove-file, .compliance-step .remove-file a{
+        font-size: 16px;
+    }
+
+    .compliance-step form h3{
+        font-size: 25px;
+    }
+    /* COMPLIANCE CSS :: ENDS */
+
+    /* TELEPHONE NUMBER CSS :: STARTS */
+    .info-para {
+        max-width: 450px;
+        font-size: 13px;
+    }
+    /* TELEPHONE NUMBER CSS :: ENDS */
+
+    /* VIEW LNP REQUEST CSS :: STARTS */
+    .view-lnp-request-section table tr td,
+    .view-lnp-request-section table tr td:first-child{
+        font-size: 16px;
+    }
+    /* VIEW LNP REQUEST CSS :: ENDS */
+
+ 
+    /* BILLING PROFILE :: ACCOUNT MANAGEMENT CSS :: ENDS */
+
+    /* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: STARTS */
+    .rates-and-fees-section{
+        padding: 30px 20px !important;
+    }
+
+    #billingInfo .tbl__body tr td:first-child, 
+    #servers .tbl__body td:first-child, 
+    #zone2 .tbl__body td:first-child, 
+    #nonUsStatesInboundTF .tbl__body td:first-child,
+    #ifax .tbl__body tr td:first-child {
+        width: 150px;
+    }
+
+    .DlcMessages .tbl__body td:first-child, 
+    #domesticUsaZone1Dids .tbl__body tr td:first-child, 
+    #internationalCalls .tbl__body tr td:first-child {
+        width: 250px;
+    }
+
+    .rates-and-fees-section .int-table__cell--th,
+    .rates-and-fees-section .int-table__cell {
+        font-size: 15px !important;
+    }
+
+    .rates-and-fees-section .tabs-nav-v2__item {
+        padding: 0px 8px;
+        font-size: 12px;
+    }
+
+    .balance-section .accordion__header{
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+    /* ACCOUNT MANAGEMENT :: RATES & FEES CSS :: ENDS */
+
+    /* ACCOUNT MANAGEMENT :: SUB USERS :: STARTS */
+    .login-info-heading{
+        font-size: 22px;
+    }
+
+    .dollar-container {
+        left: 10px;
+        top: 8px;
+    }
+
+    #lowBalanceAlertAmount,
+    #amountToRefill{
+        padding-left: 22px !important;
+    }
+    /* ACCOUNT MANAGEMENT :: SUB USERS :: STARTS */
+
+    /* REPORTS :: BILLING REPORT CSS :: STARTS */
+    .summary-table .int-table__cell{
+        font-size: 13px !important;
+    }
+
+    .input-field.select-date{
+        min-width: 250px;
+    }
+    
+    .refine-summaryDiv .int-table__inner{
+        height: fit-content !important;
+    }
+
+    .refine-summaryDiv .js-date-range{
+        padding-right: 10px !important;
+    }
+
+    #modal-config .d-flex:has(.checkbox-group-area){
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    .refine-summaryDiv .js-date-range .js-date-range__trigger .icon{
+        right: 0px;
+    }
+     /* REPORTS :: BILLING REPORT CSS :: ENDS */
+
+    /* SIP TRUNK CSS :: STARTS */
+    .optional-lable{
+        font-size: 12px;
+    }
+
+    .preference-info {
+        font-size: 15px;
+    }
+
+    .international-info.margin-top-lg {
+        font-size: 14px;
+    }
+    /* SIP TRUNK CSS :: ENDS */
+
+    /* DASHBAORD CSS :: STARTS */
+    .main-content-container {
+        padding: 5px 10px !important;
+    }
+    
+    .table-row .table-header a,
+    .chart-header a{
+        font-size: 16px;
+    }
+
+    .stats-card .table-header{
+        padding: 20px;
+    }
+
+    .table-row .search-bar {
+        width: 150px !important;
+    }
+
+    .chart-heading p{
+        font-size: 12px;
+    }
+
+    .account-health-percentage{
+        font-size: 14px;
+    }
+
+    .health-bar-section .bar-container {
+        width: 46%;
+    }
+
+    .chart-header.padding-set {
+        padding:10px 30px 0 10px!important;
+    }
+
+    .account-health-section{
+        height: 155px;
+    }
+
+    .health-bar-section{
+        gap: 12px 5px;
+        padding: 10px;
+    }
+
+    .short-term-chart {
+        height: 370px !important;
+    }
+
+    .info-icon {
+        right: 5px;
+        top: 5px;
+    }
+
+    .health-bar-value{
+        height: 8px;
+    }
+
+    .canvasDiv{
+        /* height:310px; */
+        /* width:auto; */
+    }
+    /* DASHBARD CSS :: ENDS */
+    
+    
+    #fieldOfDids button{
+        font-size: 16px !important;
+        height: 60px;
+        width: 180px;
+    }
+
+    #billing-report-switch .switch__input:checked+.switch__label+.switch__marker{
+        left: 26px !important;
+    }
+
+    .balance-notification-subscribe span{
+        font-size: 12px !important;
+    }
+
+    .balance-notification-subscribe p{
+        font-size: 13px !important;
+        width: 250px;   
+    }
+
+    .balance-section .balance-notification-subscribe{
+        margin-left: 0px !important;
+    }
+
+    .view-lnp-request-section table tr td:first-child{
+        min-width: 220px;
+        max-width: 300px;
+    }
+
+    #fieldOfDids .custom-checkbox {
+        margin-right: -22px;
+        margin-top: -10px;
+    }
+
+    .available-trunks-header p{
+        font-size: 13px;
+    }
+
+    .add-tf-campaign #step3 textarea{
+        padding-top: 10px !important;
+    }
+
+    .payment-stats-chart,
+    .telephone-number-chart{
+        height: 350px;
+    }
+
+    .dashbaord-header .radio-btn-group{
+        gap: 8px !important;
+    }
+
+    .dashbaord-header .input-group .date-input {
+        width: 200px !important;
+    }
+    /* PAGINATION CSS :: STARTS */
+    .results, .pagination,
+    .menu__content,
+    .active-page .pagination__jumper{
+        font-size: 13px;
+    }
+
+    .pagination ul li svg{
+        height: 15px;
+    }
+
+    .pagination input,
+    .active-page{
+        height: 22px !important;
+        width: 22px !important;
+        font-size: 12px;
+    }
+
+    .pagination .page_number .pagination__jumper{
+        font-size: 12px;
+    }
+
+    .active-page .pagination__jumper div {
+        margin-bottom: -2px;
+    }
+    /* PAGINATION CSS :: ENDS */
+
+    /* TABLE CSS :: STARTS */
+    .stats-card .card-header{
+        font-size: 16px;
+    }
+
+    .stats-card .table-header button{
+        font-size: 12px;
+    }
+
+    .int-table__cell .table-actions button svg{
+        height: 16px;
+    }
+    /* TABLE CSS :: ENDS */
+
+    /* EXPANDABLE ROW CSS :: STARTS */
+    .expandable-row .int-table__header .int-table__cell{
+        font-size: 11px;
+    }
+    /* EXPANDABLE ROW CSS :: ENDS */
+}
+@media only screen and (min-width: 1601px) and (max-width: 2000px) {
+    .sidenav__list {
+        gap: 15px;
+    }
+
+    .balance-info-box .accordion__header {
+       min-height: 75px;
+    }
+}
+/* MEDIAQUERY :: ENDS */

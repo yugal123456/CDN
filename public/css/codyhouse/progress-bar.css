@@ -1,0 +1,65 @@
+/* -------------------------------- 
+
+File#: _1_progress-bar
+Title: Progress Bar
+Descr: Display the current progress of a task
+Usage: codyhouse.co/license
+
+-------------------------------- */
+:root {
+    --progress-bar-width: 200px;
+    --progress-bar-height: 8px;
+    --progress-bar-radius: 50em;
+}
+
+.progress-bar__bg {
+    position: relative;
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: var(--progress-bar-radius);
+    background-color: hsla(var(--color-contrast-higher-h), var(--color-contrast-higher-s), var(--color-contrast-higher-l), 0.1);
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.progress-bar__fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: currentColor;
+}
+
+.progress-bar__value {
+    flex-shrink: 0;
+}
+
+.progress-bar[data-animation=on]:not(.progress-bar--init) .progress-bar__fill,
+.progress-bar[data-animation=on]:not(.progress-bar--init) .progress-bar__value,
+.progress-bar--color-update:not(.progress-bar--init) .progress-bar__fill,
+.progress-bar--color-update:not(.progress-bar--init) .progress-bar__value {
+    opacity: 0;
+}
+
+.progress-bar--color-update {
+    --progress-bar-color-1: 30;
+    --progress-bar-color-2: 65;
+    --progress-bar-color-3: 100;
+}
+
+.progress-bar--color-update.progress-bar--init .progress-bar__fill {
+    transition: background-color 0.3s;
+}
+
+.progress-bar--fill-color-1 .progress-bar__fill {
+    background-color: var(--color-error);
+}
+
+.progress-bar--fill-color-2 .progress-bar__fill {
+    background-color: var(--color-warning);
+}
+
+.progress-bar--fill-color-3 .progress-bar__fill {
+    background-color: var(--color-success);
+}

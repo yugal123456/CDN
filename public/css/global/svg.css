@@ -1,0 +1,276 @@
+i {
+    margin-right: 5px;
+}
+
+i::before {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    content: '';
+    mask-size: cover;
+    -webkit-mask-size: cover;
+    background-color: var(--color-contrast-higher, white);
+    mask: var(--b) no-repeat 50% 50%;
+    -webkit-mask: var(--b) no-repeat 50% 50%;
+}
+
+.btnsvg::before {
+    background-color: white;
+}
+
+.primary::before {
+    background-color: var(--primary-color);
+}
+
+.color-contrast-medium::before{
+    background-color: var(--color-contrast-medium);
+}
+
+.color-contrast-high::before{
+    background-color: var(--color-contrast-high);
+}
+
+.color-contrast-low::before{
+    background-color: var(--color-contrast-low);
+}
+
+.upsidedownsmile::before {
+    --b: url(/public/img/svg/emoji-smile-upside-down.svg);
+}
+
+.people::before {
+    --b: url(/public/img/svg/people.svg);
+}
+
+.speechbubble::before {
+    --b: url(/public/img/svg/speechbubble.svg);
+}
+
+.closedbox::before {
+    --b: url(/public/img/svg/closedbox.svg);
+}
+
+.dollarsign::before {
+    --b: url(/public/img/svg/dollarsign.svg);
+}
+
+.graph::before {
+    --b: url(/public/img/svg/graph.svg);
+}
+
+.megaphone::before {
+    --b: url(/public/img/svg/megaphone.svg);
+}
+
+.hddconnection::before {
+    --b: url(/public/img/svg/hddconnection.svg);
+}
+
+.monitor::before {
+    --b: url(/public/img/svg/monitor.svg);
+}
+
+.buildings::before {
+    --b: url(/public/img/svg/buildings.svg);
+}
+
+.stack::before {
+    --b: url(/public/img/svg/stack.svg);
+}
+
+.emptymessage::before {
+    --b: url(/public/img/svg/emptymessage.svg);
+}
+
+.poundsign::before {
+    --b: url(/public/img/svg/poundsign.svg);
+}
+
+.info::before {
+    --b: url(/public/img/svg/info.svg);
+}
+
+.edit::before {
+    --b: url(/public/img/svg/edit.svg);
+}
+
+.trash::before {
+    --b: url(/public/img/svg/trash.svg);
+}
+
+.fax::before {
+    --b: url(/public/img/svg/fax.svg);
+}
+
+.forward::before {
+    --b: url(/public/img/svg/forward.svg);
+}
+
+.hddstack::before {
+    --b: url(/public/img/svg/hddstack.svg);
+}
+
+.arrowup::before {
+    --b: url(/public/img/svg/arrow-up.svg);
+}
+
+.refresh::before {
+    --b: url(/public/img/svg/refresh.svg);
+}
+
+.wall::before {
+    --b: url(/public/img/svg/wall.svg);
+}
+
+.backup::before {
+    --b: url(/public/img/svg/backup.svg);
+}
+.eye::before{
+    --b: url(/public/img/svg/eye.svg);
+}
+
+.arrow-left-right::before {
+    --b: url(/public/img/svg/arrow-left-right.svg);
+}
+
+.phone::before {
+    --b: url(/public/img/svg/phone.svg);
+}
+.pause{
+    vertical-align: middle;
+}
+.pause::before {
+    --b: url(/public/img/svg/pause.svg);
+}
+
+.wallet::before {
+    --b: url(/public/img/svg/wallet.svg);
+}
+
+.globe::before {
+    --b: url(/public/img/svg/globe.svg);
+}
+
+.docs::before {
+    --b: url(/public/img/svg/docs.svg);
+}
+
+.returnArrowRight::before{
+    --b: url(/public/img/svg/returnArrowRight.svg);
+}
+
+.databaseAdd::before {
+    --b: url(/public/img/svg/database-add.svg);
+}
+
+.restore::before {
+    --b: url(/public/img/svg/restore.svg);
+}
+
+.simpletrash::before {
+    --b: url(/public/img/svg/simpletrash.svg);
+}
+
+.download::before {
+    --b: url(/public/img/svg/download.svg);
+}
+
+.double-chevron-right::before {
+    --b: url(/public/img/svg/double-chevron-right.svg);
+}
+
+.house::before {
+    --b: url(/public/img/svg/house.svg);
+}
+
+.ip::before {
+    --b: url(/public/img/svg/ip.svg);
+}
+
+.txt::before {
+    background-color: var(--color-contrast-higher);
+    --b: url(/public/img/svg/txt.svg);
+}
+
+.csv::before {
+    background-color: green;
+    --b: url(/public/img/svg/csv.svg);
+}
+
+.doc::before {
+    background-color: blue;
+    --b: url(/public/img/svg/doc.svg);
+}
+
+.docx::before {
+    background-color: blue;
+    --b: url(/public/img/svg/docx.svg);
+}
+
+.file::before {
+    background-color: var(--color-contrast-higher);
+    --b: url(/public/img/svg/file.svg);
+}
+
+.jpeg::before {
+    background-color: orange;
+    --b: url(/public/img/svg/jpg.svg);
+}
+
+.jpg::before {
+    background-color: orange;
+    --b: url(/public/img/svg/jpg.svg);
+}
+
+.pdf::before {
+    background-color: crimson;
+    --b: url(/public/img/svg/pdf.svg);
+}
+
+.png::before {
+    background-color: orange;
+    --b: url(/public/img/svg/png.svg);
+}
+
+.xlsx::before {
+    background-color: green;
+    --b: url(/public/img/svg/xlsx.svg);
+}
+
+.calendar::before {
+    --b: url(/public/img/svg/calendar.svg);
+}
+
+.bug::before {
+    --b: url(/public/img/svg/bug.svg);
+}
+
+.code::before {
+    --b: url(/public/img/svg/code.svg);
+}
+
+.split::before {
+    --b: url(/public/img/svg/split.svg);
+}
+.plug::before {
+    --b: url(/public/img/svg/plug.svg);
+}
+
+
+
+
+
+
+
+
+.dispose::before{
+	content:none;
+	display:none;
+}
+
+@media (max-width: 48rem){
+	.dispose\@sm::before{
+		content:none;
+		display: block;
+	}
+}

@@ -1,0 +1,568 @@
+/* -------------------------------- 
+
+File#: _1_circle-loader
+Title: Circle Loader
+Descr: A collection of animated circle loaders
+Usage: codyhouse.co/license
+
+-------------------------------- */
+/* reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 100%);
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    color: hsl(230, 13%, 9%);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.0736rem;
+}
+
+h2 {
+    font-size: 1.728rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+button,
+input,
+textarea,
+select {
+    background-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    line-height: inherit;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+    overflow: auto;
+    vertical-align: top;
+}
+
+a {
+    color: hsl(250, 84%, 54%);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img,
+video,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+@media (min-width: 64rem) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: 3.051rem;
+    }
+
+    h2 {
+        font-size: 2.44rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1.5625rem;
+    }
+}
+
+/* variables */
+:root {
+    /* colors */
+    --cp9-color-primary-hsl: 250, 84%, 54%;
+    --cp9-color-bg-hsl: 0, 0%, 100%;
+    --cp9-color-contrast-high-hsl: 230, 7%, 23%;
+    --cp9-color-contrast-higher-hsl: 230, 13%, 9%;
+    --cp9-color-contrast-lower-hsl: 240, 4%, 85%;
+    --cp9-color-contrast-low-hsl: 240, 4%, 65%;
+}
+
+/* component */
+:root {
+    --circle-loader-v1-size: 48px;
+    --circle-loader-v1-stroke-width: 4px;
+    --circle-loader-v2-size: 64px;
+    --circle-loader-v2-stroke-width: 2;
+    --circle-loader-v3-size: 64px;
+    --circle-loader-v4-size: 48px;
+    --circle-loader-v5-size: 64px;
+    --circle-loader-v6-size: 48px;
+}
+
+.circle-loader {
+    position: relative;
+    display: inline-block;
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader__label {
+        position: absolute;
+        clip: rect(1px, 1px, 1px, 1px);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v1 {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        will-change: transform;
+        -webkit-animation: circle-loader-1 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+        animation: circle-loader-1 0.75s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    .circle-loader--v1 .circle-loader__circle {
+        width: var(--circle-loader-v1-size);
+        height: var(--circle-loader-v1-size);
+        border-width: var(--circle-loader-v1-stroke-width);
+        border-style: solid;
+        border-color: hsla(var(--cp9-color-primary-hsl), 0.2);
+        border-radius: 50%;
+    }
+
+    .circle-loader--v1 .circle-loader__circle::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-width: inherit;
+        border-style: inherit;
+        border-color: transparent;
+        border-top-color: hsl(var(--cp9-color-primary-hsl));
+        border-radius: inherit;
+    }
+}
+
+@-webkit-keyframes circle-loader-1 {
+    0% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes circle-loader-1 {
+    0% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v2 {
+        will-change: transform;
+        -webkit-animation: circle-loader-spinning-main 1.4s infinite linear;
+        animation: circle-loader-spinning-main 1.4s infinite linear;
+    }
+
+    .circle-loader--v2 .circle-loader__svg {
+        display: block;
+        width: var(--circle-loader-v2-size);
+        height: var(--circle-loader-v2-size);
+        color: hsl(var(--cp9-color-primary-hsl));
+    }
+
+    .circle-loader--v2 .circle-loader__svg>* {
+        stroke-width: var(--circle-loader-v2-stroke-width);
+    }
+
+    .circle-loader--v2 .circle-loader__base {
+        opacity: 0.2;
+    }
+
+    .circle-loader--v2 .circle-loader__fill {
+        stroke-linecap: round;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 90 120;
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: circle-loader-dash 1.4s infinite;
+        animation: circle-loader-dash 1.4s infinite;
+    }
+}
+
+@-webkit-keyframes circle-loader-dash {
+
+    0%,
+    20% {
+        stroke-dashoffset: 0;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    50%,
+    70% {
+        stroke-dashoffset: 80;
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle-loader-dash {
+
+    0%,
+    20% {
+        stroke-dashoffset: 0;
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+
+    50%,
+    70% {
+        stroke-dashoffset: 80;
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes circle-loader-spinning-main {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle-loader-spinning-main {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v3 {
+        width: var(--circle-loader-v3-size);
+        height: var(--circle-loader-v3-size);
+    }
+
+    .circle-loader--v3 .circle-loader__circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: hsl(var(--cp9-color-primary-hsl));
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0.8;
+        will-change: transform, opacity;
+        -webkit-animation: circle-loader-3 1.2s infinite;
+        animation: circle-loader-3 1.2s infinite;
+    }
+
+    .circle-loader--v3 .circle-loader__circle--2nd {
+        -webkit-animation-delay: 0.6s;
+        animation-delay: 0.6s;
+    }
+}
+
+@-webkit-keyframes circle-loader-3 {
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes circle-loader-3 {
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v4 {
+        width: var(--circle-loader-v4-size);
+        height: var(--circle-loader-v4-size);
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .circle-loader--v4 .circle-loader__mask,
+    .circle-loader--v4 .circle-loader__circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+    }
+
+    .circle-loader--v4 .circle-loader__mask {
+        -webkit-clip-path: circle(calc(0.5* var(--circle-loader-v4-size)));
+        clip-path: circle(calc(0.5* var(--circle-loader-v4-size)));
+    }
+
+    .circle-loader--v4 .circle-loader__circle--1st {
+        background-color: hsl(var(--cp9-color-contrast-low-hsl));
+    }
+
+    .circle-loader--v4 .circle-loader__circle--2nd {
+        background-color: hsl(var(--cp9-color-primary-hsl));
+        will-change: transform;
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-animation: circle-loader-4 1.2s infinite cubic-bezier(0.23, 0.9, 0.75, 0.1);
+        animation: circle-loader-4 1.2s infinite cubic-bezier(0.23, 0.9, 0.75, 0.1);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes circle-loader-4 {
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@keyframes circle-loader-4 {
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v5 {
+        font-size: var(--circle-loader-v5-size);
+        width: 1em;
+        height: 1em;
+    }
+
+    .circle-loader--v5 .circle-loader__label {
+        font-size: 1rem;
+    }
+
+    .circle-loader--v5 .circle-loader__ball {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 0.140625em);
+        width: 0.28125em;
+        height: 0.28125em;
+        background-color: hsl(var(--cp9-color-primary-hsl));
+        border-radius: 50%;
+        -webkit-animation: circle-loader-5-ball 0.8s infinite;
+        animation: circle-loader-5-ball 0.8s infinite;
+    }
+
+    .circle-loader--v5 .circle-loader__shadow {
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 0.15625em);
+        width: 0.3125em;
+        height: 0.3125em;
+        background-color: hsl(var(--cp9-color-contrast-lower-hsl));
+        border-radius: 50%;
+        -webkit-transform: scaleY(0.4) scaleX(1.2);
+        transform: scaleY(0.4) scaleX(1.2);
+        -webkit-animation: circle-loader-5-shadow 0.8s infinite;
+        animation: circle-loader-5-shadow 0.8s infinite;
+    }
+}
+
+@-webkit-keyframes circle-loader-5-ball {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+        animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+    }
+
+    50% {
+        -webkit-transform: translateY(0.5625em);
+        transform: translateY(0.5625em);
+        -webkit-animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+        animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes circle-loader-5-ball {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        -webkit-animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+        animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+    }
+
+    50% {
+        -webkit-transform: translateY(0.5625em);
+        transform: translateY(0.5625em);
+        -webkit-animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+        animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes circle-loader-5-shadow {
+    0% {
+        -webkit-transform: scaleY(0.4) scaleX(1.2);
+        transform: scaleY(0.4) scaleX(1.2);
+        background-color: hsl(var(--cp9-color-contrast-lower-hsl));
+        -webkit-animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+        animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+    }
+
+    50% {
+        -webkit-transform: scaleY(0.2) scaleX(0.6);
+        transform: scaleY(0.2) scaleX(0.6);
+        background-color: hsl(var(--cp9-color-contrast-low-hsl));
+        -webkit-animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+        animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+    }
+
+    100% {
+        -webkit-transform: scaleY(0.4) scaleX(1.2);
+        transform: scaleY(0.4) scaleX(1.2);
+        background-color: hsl(var(--cp9-color-contrast-lower-hsl));
+    }
+}
+
+@keyframes circle-loader-5-shadow {
+    0% {
+        -webkit-transform: scaleY(0.4) scaleX(1.2);
+        transform: scaleY(0.4) scaleX(1.2);
+        background-color: hsl(var(--cp9-color-contrast-lower-hsl));
+        -webkit-animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+        animation-timing-function: cubic-bezier(0.61, 0.12, 0.85, 0.4);
+    }
+
+    50% {
+        -webkit-transform: scaleY(0.2) scaleX(0.6);
+        transform: scaleY(0.2) scaleX(0.6);
+        background-color: hsl(var(--cp9-color-contrast-low-hsl));
+        -webkit-animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+        animation-timing-function: cubic-bezier(0.12, 0.59, 0.46, 0.95);
+    }
+
+    100% {
+        -webkit-transform: scaleY(0.4) scaleX(1.2);
+        transform: scaleY(0.4) scaleX(1.2);
+        background-color: hsl(var(--cp9-color-contrast-lower-hsl));
+    }
+}
+
+@supports ((-webkit-animation-name: this) or (animation-name: this)) {
+    .circle-loader--v6 .circle-loader__svg {
+        display: block;
+        width: var(--circle-loader-v6-size);
+        height: var(--circle-loader-v6-size);
+        color: hsl(var(--cp9-color-primary-hsl));
+    }
+
+    .circle-loader--v6 .circle-loader__fill {
+        stroke-width: 8px;
+        stroke-dashoffset: 35;
+        stroke-dasharray: 36 36;
+        -webkit-animation: circle-loader-6 1.5s infinite;
+        animation: circle-loader-6 1.5s infinite;
+    }
+}
+
+@-webkit-keyframes circle-loader-6 {
+
+    0%,
+    100% {
+        stroke-dashoffset: 35;
+    }
+
+    50% {
+        stroke-dashoffset: -35;
+    }
+}
+
+@keyframes circle-loader-6 {
+
+    0%,
+    100% {
+        stroke-dashoffset: 35;
+    }
+
+    50% {
+        stroke-dashoffset: -35;
+    }
+}

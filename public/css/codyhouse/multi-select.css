@@ -1,0 +1,267 @@
+/* --------------------------------
+
+File#: _1_adv-multiple-custom-select
+Title: Advanced Multiple Custom Select
+Descr: Custom select with advanced structure options and where multiple options can be selected
+Usage: codyhouse.co/license
+
+-------------------------------- */
+
+/* reset */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: hsl(0, 0%, 100%);
+  font-family: system-ui, sans-serif;
+  color: hsl(230, 7%, 23%);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.4;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  color: hsl(230, 13%, 9%);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.5rem; /* 40px */
+}
+
+h2 {
+  font-size: 2.125rem; /* 34px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+}
+
+h4 {
+  font-size: 1.375rem; /* 22px */
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+button, input, textarea, select {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  vertical-align: top;
+}
+
+a {
+  color: hsl(250, 84%, 54%);
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, video, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --------------------------------
+
+Buttons
+
+-------------------------------- */
+
+.cd-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375em;
+  font-size: 1em;
+  text-decoration: none;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: 0.2s;
+  will-change: transform;
+}
+
+.cd-btn:focus-visible {
+  outline: none;
+}
+
+.cd-btn:active {
+  transform: translateY(2px);
+}
+
+.cd-btn--subtle {
+  background: hsl(0, 0%, 100%);
+  color: hsl(230, 13%, 9%);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1),
+              0 0 0 1px hsla(230, 13%, 9%, 0.02),
+              0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),
+              0 1px 3px -1px hsla(230, 13%, 9%, 0.2),
+              0 3.5px 6px hsla(230, 13%, 9%, 0.12);
+}
+
+.cd-btn--subtle:hover {
+  background: hsl(0, 0%, 100%);
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1),
+              0 0 0 1px hsla(230, 13%, 9%, 0.02),
+              0 0.1px 0.3px hsla(230, 13%, 9%, 0.06),
+              0 1px 2px hsla(230, 13%, 9%, 0.12),
+              0 1px 3px -1px hsla(230, 13%, 9%, 0.2);
+}
+
+.cd-btn--subtle:focus-visible {
+  box-shadow: inset 0 1px 0 hsla(0, 0%, 100%, 0.1),
+              0 0 0 1px hsla(230, 13%, 9%, 0.02),
+              0 0.3px 0.4px hsla(230, 13%, 9%, 0.025),
+              0 1px 3px -1px hsla(230, 13%, 9%, 0.2),
+              0 3.5px 6px hsla(230, 13%, 9%, 0.12),
+              0 0 0 2px hsl(0, 0%, 100%),
+              0 0 0 4px hsl(230, 7%, 23%);
+}
+
+/* --------------------------------
+
+Icons
+
+-------------------------------- */
+
+.cd-icon {
+  --size: 1em;
+  font-size: var(--size);
+  height: 1em;
+  width: 1em;
+  display: inline-block;
+  color: inherit;
+  fill: currentColor;
+  line-height: 1;
+  flex-shrink: 0;
+  max-width: initial;
+}
+
+.cd-icon use { /* SVG symbols - enable icon color corrections */
+  color: inherit;
+  fill: currentColor;
+}
+
+/* --------------------------------
+
+Component
+
+-------------------------------- */
+
+.advm-select {
+  overflow: hidden;
+  height: 236px;
+  border-radius: 0.375em;
+  box-shadow: 0 0 0 1px hsla(230, 13%, 9%, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+.advm-select:focus-within {
+  box-shadow: 0 0 0 2px hsl(250, 84%, 54%);
+}
+
+.advm-select:focus-within .advm-select__list {
+  border-color: hsl(250, 84%, 54%);
+}
+
+.advm-select__list {
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.advm-select__list:focus {
+  outline: none;
+}
+
+.advm-select__option,
+.advm-select__label {
+  -webkit-user-select: none;
+      user-select: none;
+  padding: 0.75rem 1rem;
+}
+
+.advm-select__option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.advm-select__option:hover {
+  background-color: hsla(230, 13%, 9%, 0.075);
+}
+
+.advm-select__option:focus {
+  outline: none;
+  background-color: hsla(250, 84%, 54%, 0.15);
+}
+
+.advm-select__option[aria-selected=true] {
+  background-color: hsl(250, 84%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+
+.advm-select__option[aria-selected=true] .advm-select__check {
+  visibility: visible;
+}
+
+.advm-select__option[aria-selected=true]:focus {
+  background-color: hsl(250, 84%, 46%);
+}
+
+.advm-select__label {
+  font-size: 0.9375rem;
+  color: hsl(225, 4%, 47%);
+}
+
+.advm-select__check {
+  visibility: hidden;
+  margin-right: 0.75rem;
+}
+
+/* --------------------------------
+
+Utilities
+
+-------------------------------- */
+
+.cd-margin-top-3xs {
+  margin-top: 0.5rem;
+}
+
+.cd-margin-right-sm {
+  margin-right: 1.5rem;
+}
+
+.cd-hide {
+  display: none !important;
+}
